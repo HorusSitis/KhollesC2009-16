@@ -1,0 +1,78 @@
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}% On peut changer en cours de route avec la commande \newgeometry
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{amsmath,amsfonts,amssymb,graphicx}
+\usepackage[dvipsnames]{pstricks}
+\usepackage{pstricks-add,pst-plot,pst-node}
+%\usepackage{fp}
+%\usepackage{multido}
+%\usepackage{pdftricks}
+
+%\usepackage{color} %(black, white, red, green, blue, yellow, magenta et cyan)
+
+%\usepackage{amsthm}
+\usepackage{framed}
+\usepackage[amsthm,thmmarks,framed]{ntheorem}
+
+\usepackage{multicol}
+%\begin{multicols}[titre]{nb colonnes}
+%\setlength{\columnseprule}{0.25pt}
+\usepackage{array}
+
+\usepackage{titletoc}
+%\usepackage{hyperref} Probl\`emes avec la mise en page des exercices.
+
+%\dottedcontents{section}[left]{above}{labelwidth}{leaderwidth = espacement entre les pointillés par exemple}
+\dottedcontents{section}[0em]{\vspace{0.35cm}\bfseries}{3em}{0.75em}
+\dottedcontents{subsection}[1.5em]{\vspace{0.15cm}}{4em}{0.75em}
+\dottedcontents{subsubsection}[3em]{}{5em}{0.75em}
+
+\setlength{\parindent}{0cm}
+
+\newcommand{\g}[1]{\`#1}
+
+\newcommand*{\etoile}
+{
+\begin{center}
+\hspace{1pt}\par
+*\hspace{5pt}*\hspace{5pt}*
+\end{center}
+}
+
+
+\newcommand*{\ligneinter}
+{
+\begin{center}
+\vspace{-2pt}
+\hfill\rule{0.5\linewidth}{0.4pt}\hfill\null
+\end{center}
+\vspace{7pt}
+}
+
+% Je veux cr\'eer un environnement pour les énoncés préliminaires des exercices, afin d'éviter l'utilisation manuelle de \linebreak et, 
+%pourquoi pas, éviter le bug de centrage systématique de l'en-tête.
+  
+{%
+\theoremstyle{break}
+\theoremprework{\vspace{0.5cm}\begin{minipage}{\textwidth}}
+\theorempostwork{\etoile\end{minipage}}
+\theoremheaderfont{\scshape}
+\theorembodyfont{\normalfont}
+\theoremseparator{ :\newline\vspace{0.2cm}}
+\newtheorem{exer}{Exercice}[section]
+}
+  
+{
+\theoremstyle{break}
+%\theoremprework{\vspace{0.2cm}}
+\theorempostwork{\ligneinter}%\hfill\rule{0.6\linewidth}{0.4pt}\hfill\null}
+
+\theoremheaderfont{\scshape}
+\theorembodyfont{\normalfont}
+\theoremseparator{ :\newline\vspace{0.2cm}}
+\newtheorem{ques}{Question}[section] %Autre pr\'esentation : encadrer les \'enonc\'es ?
+} 
+  
+%\setcounter{section}{-1}
+\renewcommand{\thesection}{\Roman{section}}
