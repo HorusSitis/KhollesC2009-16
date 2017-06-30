@@ -1,0 +1,43 @@
+\section{Groupes, anneaux}
+
+\begin{exer}
+Soit $E$ un ensemble.\\
+Montrer que $E$ est infini si et seulement si, toute bijection de $E$ sur lui-même stabiliseau moins une partie stricte de $E$.
+\end{exer}
+
+\begin{exer}[Cas particulier du théorème de Cauchy]
+Soient $p$ un nombre premier impair, et $G$ un groupe d'ordre $2p$.\\
+Montrer que $G$ admet un élément d'ordre $p$.
+%Indications : (i) Quels sont les ordres possibles des éléments de $G$ ?\\
+%(ii) Un groupe dont tous les éléments sont d'ordre $2$ est abélien, et muni par l'exponentiation d'une structure d'espace vectoriel sur $\mathbb{Z} / 2 \mathbb{Z}$.\\
+%Conclure à l'aide d'un argument de dimension.
+\end{exer}
+
+\begin{exer}
+Soit $(G,.)$ un groupe abélien fini, noté multiplicativement. Pour tout élément $x$ de $G$, on note $O(x)$ l'ordre de $x$.
+\begin{enumerate}
+\item Soient $x$ et $y$ deux éléments de $G$ tels que $O(x)$ et $O(y)$ soient premiers entre eux. Déterminer l'ordre de $xy$.
+\item On suppose ici $x$ et $y$ quelconques. Montrer qu'il existe un élément $z$ de $G$ tel que : $O(z) = O(x) \vee O(y)$.
+\item En déduire l'existence d'un élément de $G$ dont l'ordre $m$ est le ppcm des ordres des éléments de $G$. %
+$m$ est appelé exposant de $G$.
+\item Supposons maintenant :\[\forall d \in \mathbb{N}^{\ast} , \lvert \{ x \in G / x^d = 1 \} \rvert \leqslant d\]
+Montrer que $G$ est cyclique.
+\item Soit $\mathbb{K}$ un corps commutatif. Montrer que %
+tout sous-groupe fini du groupe multiplicatif de $\mathbb{K}$ est cyclique.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Tout anneau intègre et fini est un corps]%Questions intermédiaires : pas d'obligation.
+%Je pose tout d'abord le problème directement à l'élève, et je le laisse réfléchir quelques minutes sans indication de solution. Je continue l'interrogation en fonction de ses réactions, en posant éventuellement les questions intermédiaires qui suivent.\\
+Soit en effet $(A,+,\times)$ un anneau, non nécessairement supposé unitaire, intègre et fini. %
+Pour tout élément $a$ de $A \setminus \{0\}$, on note $m_a$ l'endomorphisme de multiplication à gauche %
+$x \mapsto a \times x$ du groupe $(A,+)$ -pourquoi est-ce un endomorphisme ?
+\begin{enumerate}
+\item Montrer que les termes de la famille $(m_a)$ sont des automorphismes de $(A,+)$.
+\item Montrer que $a \mapsto m_a$ induit un morphisme injectif de la structure algébrique associative %
+$(A \setminus \{0\}, \times)$ dans le groupe des automorphismes de $(A,+)$.
+\item Démontrer le lemme suivant :\textit{Soient $(G,\ast)$ un groupe et $F$ %
+une partie finie de $G$ stable par $\ast$. Alors $(F,\ast)$ est un groupe.}
+\item Conclure.
+\end{enumerate}
+\end{exer}
