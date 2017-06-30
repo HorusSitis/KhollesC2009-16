@@ -1,0 +1,85 @@
+\section{Classiques, ou presque \dots mais beaux !}
+
+\begin{exer}[Ruine du joueur]
+\textit{
+Un joueur dispose d'une mise initiale de $k$ euros. %
+A chaque partie qu'il joue, il a la probabilit\'e $p$ de perdre un euro, dans le cas contraire sa mise augmente d'un euro. %
+Ce joueur se fixe comme objectif de jouer jusqu'\`a ce qu'il soit ruin\'e, ou jusqu'\`a ce que son capital atteigne la somme de $M$ euros, o\`u $M$ est un entier fix\'e \`a l'avance.
+}
+\ligneinter
+\begin{enumerate}
+\item On veut calculer la probabilit\'e de l'\'ev\`enement : "le joueur finit ruin\'e".
+\begin{enumerate}
+\item Mod\'eliser, pour une mise $k$ quelconque au d\'ebut du jeu, le rpobl\`eme comme une marche al\'eatoire.
+
+\medskip
+Pour tout entier $k$ compris entre $0$ et $M$, on note $E_k$ l'\'ev\'enement correspondant \`a : %
+"le joueur, ayant mis\'e $k$ euros, finit ruin\'e avant d'avoir enpoch\'e un capital de $M$". On note $q_k$ la probabinit\'e correspondant \`a un tel \'ev\`enement.
+\item Calculer $q_0$ et $q_M$.
+\item Montrer la relation de r\'ecurrence : $q_j=(1-p)q_{j+1}+pq_{j-1}$, pour tout indice $j$ o\`u cette formule est d\'efinie.
+\item Montrer, pour tout $j$, que : $q_{j+1}-q_j=\left(\frac{p}{1-p}\right)^j(q_1-q_0)$
+\item En d\'eduire que : $\forall k \in [\![0,M]\!] , q_k-q_0=(q_1-q_0)\sum\limits_{j=0}^{k-1}\left(\frac{p}{1-p}\right)^j$.
+\item En appliquant la formule pr\'ec\'edente au rang $M$, donner une expression de $q_1$ en fonction de $p$. %
+On distinguera bien le cas o\`u $p=\frac{1}{2}$.
+\item Donner une expression de $q_k$ en fonction de $p$.
+\end{enumerate}
+\item Soit maintenant pour tout $k$ compris entre $0$ et $M$, $F_k$ l'\'ev\`enement : "le joueur empoche la mise de $M$ euros sans avoir jamais \'et\'e ruin\'e".
+\begin{enumerate}
+\item Peut-on dire que les \'ev\`enements $E_k$ et $F_k$ sont contraires ?
+\item En utilisant la m\^eme m\'ethode que pour $E_k$, exprimer la probabilit\'e de $F_k$ en fonction de $p$. On distiguera bien le cas o\`u $p=\frac{1}{2}$.
+\item Conclusion ?
+\end{enumerate}
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Nombre de cycles dans une grande permutation al\'eatoire]
+Dans cet exercice, on cherche \`a estimer le nombre de cycles d'une permutation choisie au hasard dans le groupe sym\'etrique $\mathcal{S}_n$ de $[\![1,n]\!]$, quand $n$ est un entier naturel qui tend vers $+\infty$.\\
+On \'etudie donc une suite $(S_n)$ de variables al\'eatoires, de lois uniformes, respectivement sur les termes de $(\mathcal{S}_n)$.\\
+Pour toute permutation $\sigma$ d'un ensemble $[\![1,n]\!]$, on note $c(\sigma)$ le nombre de cycles de $\sigma$.\\
+Par exemple : $c(S_n)=1$ lorsque la valeur de $S_n$ est un cycle, $c(S_n)=n$ lorsque $S_n$ prend comme valeur l'identit\'e.
+\ligneinter
+\vspace{-0.2pt}
+\begin{enumerate}
+\item Pour tout entier $n$ strictement positif, on note $\Phi^n$ l'application :
+\[\mathcal{S}_n\times [\![1,n+1]\!] \longrightarrow \mathcal{S}_n : (\sigma ,i) \mapsto \tilde{\sigma}\circ (i , n+1)\]
+o\`u $\tilde{\sigma}$ est la permutation de $[\![1,n+1]\!]$ qui agit comme $\sigma$ sur $[\![1,n]\!]$, et fixe $n+1$.\\
+Montrer que cette application est une bijection.
+\item Avec les conventions qui pr\'ec\`edent, discuter, selon $\sigma$ et $i$, de la valeur de $c(\Phi^n(\sigma))$ en fonction de $c(\sigma)$.
+
+\medskip
+On se fixe maintenant un entier naturel non nul $n$ et on cherche \`a conna\^itre la loi de $S_n$.\\
+Soit $(U_k)_{k\in [\![1,n-1]\!]}$ une famille de variables al\'eatoires, ind\'ependantes, respectivement sur les termes de $([\![1,k+1]\!])_k$. Soit $(X_k)$ la suite de variables al\'eatoires, d\'efinie par r\'ecurrence finie sur $k$ par :\\
+$X_1$ prend seulement la valeur $Id_{\{1\}}$ ; $\forall k \in [\![1,n-1]\!] , X_{k+1}=\Phi^k(X_k,U_k)$.\\
+\item Montrer que pour tout $k$, $c(X_k)$ est une sommme de variables al\'eatoires de Bernoulli, ind\'ependantes entre elles, dont on pr\'ecisera les param\`etres.
+\item Montrer que, pour tout $k$, $X_k$ et $S_k$ ont la m\^eme loi. En d\'eduire la loi de $c(S_n)$.
+\item Calculer l'esp\'erance et la variance de $S_n$.\\
+Pour tout entier $n$ strictement positif, on note $H_n$ le $n-$i\`eme nombre harmonique d\'efini par : $H_n=\sum\limits_{k=1}^{n}\frac{1}{k}$.
+\item Montrer que, pour tout r\'eel $\epsilon$ strictement positif : $\mathbb{P}\left(\left|\frac{c(S_n)}{H_n}-1\right|\geq 1\right)\underset{n\rightarrow \infty}{\rightarrow}0$.\\
+On dit que $\frac{c(S_n)}{H_n}$ converge vers $1$ en probabilit\'e.
+\item En d\'eduire que $\frac{c(S_n)}{\log n}$ converge vers $1$ en probabilit\'e. Conclusion ?
+\end{enumerate}
+\end{exer}
+
+%\newpage
+
+\begin{exer}[Marche al\'eatoire cyclique]
+Soit $N$ un entier naturel sup\'erieur \`a $2$. On d\'efinit une suite $(z_n)$ de variables al\'eatoires ind\'ependantes, de même loi donn\'ee par :
+\[\forall n \in \mathbb{N}^{\ast}, \mathbb{P}\left(z_n =\exp\frac{2i\pi}{N}\right) = \frac{1}{2} \wedge \mathbb{P}\left(z_n =\exp -\frac{2i\pi}{N}\right) = \frac{1}{2}\]
+On d\'efinit ensuite la marche $(s_n)$, sur $\mathbb{U}_N$, par :
+\[s_0=1 \wedge \forall n \in \mathbb{N} , s_{n+1}=s_n z_n\]
+\ligneinter
+\begin{enumerate}
+\item Montrer que $(s_n)$ parcourt tout $\mathbb{U}_N$ avec probabilit\'e $1$.
+On d\'efinit la variable al\'eatoire $V$ par :\\
+$V$ est la derni\`ere valeur dans $\mathbb{U}_N$ atteinte par la suite $(s_n)$ si la marche parcourt tout $\mathbb{U}_N$, %
+et vaut $1$ si cet \'ev\`enement ne se r\'ealise pas.
+\item Montrer que $V$ suit la loi uniforme sur $\mathbb{U}_N\setminus \{1\}$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Norme euclidienne d'un sommet de l'hypercube choisi au hasard]
+Pour un entier $n$ strictement positif, on note $H_n$ l'ensemble des sommets de l'hypercube de dimension $n$, $\{0,1\}^n$. %
+Soit de plus $X_n$ une variable al\'eatoire uniforme sur $H_n$. Montrer que, si $n$ tend vers $+\infty$, %
+alors la norme euclidienne de $X_n$ divisée par $\sqrt{n}$ converge en probabilit\'e vers $\frac{\sqrt{2}}{2}$ :
+\[\forall\varepsilon\in\mathbb{R}_+^{\ast},\mathbb{P}\left(\left|\frac{\|X_n\|}{\sqrt{n}}-\frac{\sqrt{2}}{2}\right|\geq\varepsilon\right)\underset{n\rightarrow +\infty}{\longrightarrow}0\]
+\end{exer}

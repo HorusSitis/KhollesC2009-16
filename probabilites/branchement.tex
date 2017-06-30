@@ -1,0 +1,71 @@
+\section{Processus de branchement}
+
+\begin{exer}%[Processus de branchement]
+\begin{center}
+\textit{
+Un processus de branchement est une famille de variables al\'eatoires qui permet d'\'etudier l'\'evolution de la taille d'une population.% 
+Historiquement, c'est F Galton, pour estimer le probabilit\'e d'extinction des noms nobles, qui a \'etudi\'e le premier de ces processus : le processus de Galton-Watson.\\
+}
+\end{center}
+\ligneinter
+Soit $X_0$ la taille initiale de la population \'etudi\'ee.\\
+Chaque individu donne naissance, ind\'ependamment des autres, \`a $m$ nouveaux individus, suivant une loi $(p_m)$. %
+Les descendants directs de la population initiale forment la premi\`ere g\'en\'eration, dont on note la taille, al\'eatoire, $X_1$. Ces descendants ont des enfants, chacun suivant la m\^eme loi $(p_k)$, et engendrent la deuxi\`eme g\'en\'eration, de taille $X_2$. %
+De proche en proche, on d\'efinit ainsi la suite $(X_n)$, dont le terme g\'en\'eral nous donne le nombre d'individus de la $n-$i\`eme g\'en\'eration.\\
+Formellement, supposons que : $X_0=1$.\\
+On d\'efinit la famille de $((\xi_k^{n})_{k\in\mathbb{N}^{\ast}})_{n\in\mathbb{N}^{\ast}}$ des variables al\'eatoires $L^2$, ind\'ependantes entre elles et toutes de loi $(p_m)_m$, qui r\'egissent la reproduction des individus des diff\'erentes g\'en\'erations, de sorte que:
+\[\forall n \in \mathbb{N} , X_{n+1}=\sum\limits_{k=1}^{X_n} \xi_k^{n+1}\]
+La fonction g\'en\'eratrice $\varphi$ de la loi commune des termes de $(\xi_k^n)$ est d\'efinie, pour tout $s$ de $[-1,1]$, par :\[\varphi(s)=\sum\limits_{m=0}^{\infty}p_m s^m\]
+On note, pour tout entier $n$ strictement positif, $\varphi_n$ la fonction g\'en\'eratrice de $X_n$.
+\ligneinter
+\begin{enumerate}
+\item Quelle est la loi de $X_1$ ?
+On notera, respectivement, $m$ et $\sigma$ sa variance et son \'ecart-type.
+\item Justifier la formule : $\forall s \in [-1,1], G_Y(s)=\mathbb{E}(s^Y)$, valable pour toute variable al\'eatoire discr\`ete $Y$ de fonction g\'en\'eratrice $G_Y$ %
+(on ne s'int\'eresse pas \`a l'espace de probabilit\'e sous-jacent).
+\item D\'emontrer soigneusement que, pour tout entier positif $n$ :
+\[\mathbb{E}\left(s^{X_{n+1}}\right)=\sum\limits_{x\in X_n(\Omega)}\mathbb{E}\left(s^{\sum\limits_{k=1}^{x}\xi_k^{n+1}}\right)\mathbb{P}(X_n=x)\]
+\item En d\'eduire que : $\forall n\in\mathbb{N},\varphi_n=\varphi^{\circ n}$ o\`u $\varphi^{\circ n}$ est le $n-$i\`eme it\'er\'e de $\varphi$.
+\item D\'emontrer que, pour tout entier $n$ strictement positif $n$, $X_n$ est $L^2$ et :
+\begin{center}$\mathbb{E}(X_n)=m^n$ ; $V(X_n)=\sigma^2 m^{n-1}\frac{m^n-1}{m-1}$ si $m\neq 1$ ; $V(X_n)=n\sigma^2$ si $m=1$.\end{center}
+\hspace*{-2em}\textit{On s'int\'eresse \`a la probabilit\'e $\pi$ d'extinction de la population, d\'efinie par : %
+$\pi=\mathbb{P}(\exists n\in \mathbb{N} | x_n=0)$.}
+\item Pourquoi peut-on \'ecrire $\pi =\underset{n\rightarrow +\infty}{lim}\mathbb{P}(X_n=0)$ ?
+
+\medskip
+On note, pour tout entier naturel $n$ : $q_n=\mathbb{P}(X_n=0)$.
+\item Que dire de $\pi$ si $p_0=0$, $p_0=1$ ?
+On suppose maintenant : $p_0\in ]0,1[$.
+\item Montrer que : $\pi=\varphi (\pi)$. On \'etablira pour cela une relation de r\'ecurrence sur les termes de $(q_n)$.
+\item Discuter, suivant $m$, de la valeur de $\pi$ \`a l'aide des propri\'et\'es analytiques de $\varphi$.
+\end{enumerate}
+\end{exer}
+
+%Ajouter, après une étude du cas m>0 et de l'éventuelle croissance exponentielle de la population, un exercice concernant les multiplicateurs d'électrons.
+
+\begin{exer}
+A l'instant $0$, une culture biologique d\'emarre avec une cellule rouge. %
+Au bout d'une minute, cete cellule meurt et est remplacée par :
+\begin{itemize}
+\item deux cellules rouges avec probabilit\'e $\frac{1}{4}$,
+\item Une cellule rouge et une cellule blanche avec probabilit\'e $\frac{2}{3}$,
+\item deux cellules blanches probabilit\'e $\frac{1}{12}$.
+\end{itemize}
+Chaque cellule rouge vit une minute et se reproduit \`a son tour suivant la m\^eme r\`egle, %
+chaque cellule blanche meurt dans le m\^eme temps sans se reproduire.
+\begin{enumerate}
+\item A l'instant $n+\frac{1}{2}$, quelle est la probabilit\'e qu'aucune cellule blanche %
+n'ait encore fait son apparition ?
+\item Quelle est la probabilit\'e que la population tout enti\`ere disparaise ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Division cellulaire]
+On garde la notation de l'exercice qui précède.\\
+Soit $(Z_n)$ un proc\'ed\'e de division dans une population de cellules, v\'erifiant : %
+$p_0>0$ ; $p_2>0$ ; $p_1\in[0,1[$ et $p_n=0$ pour tout $n$ sup\'erieur ou \'egal \`a $3$.
+\begin{itemize}
+\item Etudier la probabilit\'e d'extinction de $(Z_n)$.
+\item Quelle est la signification, biologiquement, du cas : $p_1=0$ ?
+\end{itemize}
+\end{exer}
