@@ -1,0 +1,166 @@
+\section{Suites et séries de fonctions}
+
+\begin{exer}
+Posons : $(a,b) \in \mathbb{R}$ $a < b$.
+\begin{enumerate}
+\item On dit qu'une application de $[a,b]$ dans $\mathbb{R}$ est réglée si et seulement si %
+elle est limite uniforme d'une suite de fonctions en escalier.
+\begin{enumerate}
+\item Soit : $f \in \mathbb{R}^{[a,b]}$. Montrer que $f$ est réglée si et seulement si elle satisfait la condition : %
+$f$ admet en tout point de $[a,b]$ une limite à gauche et une limite à droite, lorsque ces limites sont définies.
+%Indications : (i) implique (ii) d'après le cours. Pour montrer que (ii) implique (i), utiliser la définition des limites à gauche et à droite puis constater que $[a,b]$ vérifie la propriété de Borel-Lebesgue. J'indique que ce raisonnement généralise la démonstration du théorème d'approximation des applications continues définies sur un segment par des fonctions en escalier, dont le point clé est l'utilisation du théorème de Heine, qui peut se démontrer avec Borel-Lebesgue.\\
+\item Montrer que l'ensemble des points de discontinuité d'une telle application est au plus dénombrable.
+%Indication : La réunion d'une famille dénombrable d'ensembles finis est au plus dénombrable.\\
+\end{enumerate}
+\item On s'int\'eresse maintenant aux fonctions int\'egrables au sens de Riemann
+\begin{enumerate}
+\item Rappeler la définition de l'intégrabilité au sens de Riemann d'une application $f$ de $[a,b]$ dans $\mathbb{R}$.
+%\smallskip
+%\textit{J'introduis ici les notations : $E^+(f)$, respectivement $E^-(f)$, %
+%est l'ensemble des applications en escalier de $[a,b]$ dans $\mathbb{R}$ majorant, respectivement minorant $f$.}
+Pour toute fonction r\'eelle $f$, on note $E^+(f)$, respectivement $E^-(f)$, l'ensembe de fonctions en escalier d\'efinies sur $[a,b]$ et inf\'erieures, respectivement sup\'erieures, \g{a} $f$ sur $[a,b]$.
+\item Montrer que, lorsque $E^+(f)$ et $E^-(f)$ sont tous les deux non vides, %
+que $\inf_{\varphi \in E^+(f)}(\int \varphi)$ et $\sup_{\varphi \in E^-(f)}(\int \varphi)$ %
+sont bien définies dans $\mathbb{R}$ et vérifient : %
+$\inf_{\varphi \in E^+(f)}(\int \varphi) \geq \sup_{\varphi \in E^-(f)}(\int \varphi)$
+\end{enumerate}
+\item Montrer que toute application réglée $f$ de $[a,b]$ dans $\mathbb{R}$ est intégrable au sens de Riemann.
+%En particulier, une telle application est bornée sauf sur un ensemble dénombreable.
+%Indications : On montre simultanément que $E^+(f)$ et $E^-(f)$ sont tous les deux non vides, et que :
+%\[\forall \epsilon \in \mathbb{R}_+^* , \inf_{\varphi \in E^+(f)}(\int \varphi) - \sup_{\varphi \in E^-(f)}(\int \varphi) \leq \epsilon\]
+%Pour cela, poser : $\epsilon \in \mathbb{R}_+^*$ ; remarquer qu'il existe une application $\varphi$ en escalier de $[a,b]$ dans $\mathbb{R}$ située à une distance inférieure à $\frac{\epsilon}{b-a}$ de $f$, puis encadrer $f$ par $\varphi + \frac{\epsilon}{b-a}$ et $\varphi - \frac{\epsilon}{b-a}$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Etudier la convergence de la s\'erie de fonctions :
+\[\sum x\mapsto \frac{x\exp -nx}{\ln n}\]
+d\'efinies sur $\mathbb{R}$, pour tout entier $n$ strictement positif.
+\end{exer}
+
+\begin{exer}
+Soit $S$ la fonction, somme de la s\'erie : $\sum x\mapsto nx\exp(-nx^2)$. 
+\begin{enumerate}
+\item Donner le domaine de d\'efinition de $S$.
+\item La convergence de la s\'erie est-elle normale, uniforme, sur ce domaine ?
+\item Exprimer $S$ \`a l'aide de fonctions usuelles.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $E$ l'espace vectoriel des suites r\'eelles born\'ees, %
+que l'on munit de sa norme de convergence uniforme, $\| \|_{\infty}$.
+
+D\'eterminer si les sous-ensembles qui suivent sont ferm\'es ou non :
+\begin{itemize}
+\item L'ensemble $F$ des suites croissantes.
+\item L'ensemble $c_0$ des suites qui convergent vers $0$.
+\item L'ensemble $V_0$ des suites qui admettent $0$ comme valeur d'adh\'erence.
+\item L'ensemble $S$ des suites sommables.
+\item L'ensemble $P$ des suites p\'eriodiques.
+\item Bonus : l'ensemble $c$ des suites convergentes.
+\end{itemize}
+\end{exer}
+
+%\textit{Le détail des questions dans les deux exercices qui suivent est seulement suggéré. Je laisse le soin à l'élève de réfléchir personnellement à ces deux problèmes, qui concernent les applications de classe $C^{\infty}$ de $\mathbb{R}$ dans lui-même.}
+
+\begin{exer}
+\begin{enumerate}
+\item Soient $I$ un intervalle de $\mathbb{R}$ non vide, non borné supérieurement, %
+et $f$ une application $C^{\infty}$ de $I$ dans $\mathbb{R}$ admettant une limite finie en $+ \infty$. %
+$f'$ tend-t-elle vers $0$ en $+ \infty$ ? Est-elle bornée au voisinage de $+ \infty$ ?
+%Réponse : Non. Considérer $x \mapsto \frac{\sin x^3}{x}$.\\
+\item Que devient ce résultat si l'on suppose, de plus, $f$ croissante ?
+%Nous allons construire un contre-exemple comme limite, en un sens que l'on précisera, d'une série de fonctions.\\
+\item  Soit $g$ l'application définie sur $\mathbb{R}$ par :
+\[\forall x \in \mathbb{R}_+^*, g(x) = e^{- \frac{1}{x}}\]
+et $g|_{\mathbb{R}_-} = 0$
+\begin{enumerate}
+\item Montrer que $g$ est de classe $C^{\infty}$ sur $\mathbb{R}$.
+%Indication : Raisonner par récurrence; on utilisera le théorème limite de la dérivation :\\
+%soit $u$ une application définie sur un voisinage $V$ d'un point $a$ de $\mathbb{R}$, dérivable sur $V \setminus \{ a \}$, continue en $a$. Si $u'$ admet une limite $l$ en $a$, alors $u$ est dérivable, de dérivée $l$, en $a$.\\
+\item Soit $\theta \in \mathbb{R}_+^*$. Définir, à l'aide de $g$, une application $h_{\theta}$ de $\mathbb{R}$ dans $\mathbb{R}$, $C^{\infty}$, nulle sur $\mathbb{R} \setminus ]0 , \theta[$, et strictement positive sur $]0 , \theta[$.
+\item Soit $(\alpha , \theta) \in (\mathbb{R}_+^*)^2$. Définir une application $H_{\theta , \alpha}$ de $\mathbb{R}$ dans $\mathbb{R}$, $C^{\infty}$, nulle sur $\mathbb{R}_-$, égale à $\alpha$ sur $[ \theta , + \infty[$, et strictement croissante sur $[0, \theta]$.
+%Indication : On pourra considérer une primitive de $h_{\theta}$.\\
+%\textit{Je donne un temps de réflexion à l'élève afin qu'il trouve une ébauche de solution. Je poursuis l'interrogation en posant, éventuellement, la question intermédiaire qui suit.}
+
+\medskip
+Soit maintenant $(f_n)$ la suite de fonctions définies sur $\mathbb{R}$ par :
+\[\forall n \in \mathbb{N}^* , \forall x \in \mathbb{R} , f_n(x) = H_{1/n^3 , 1/n^2} (x - n)\]
+On constate que $\sum f_n$ est convergente -en quel sens ?- sur $\mathbb{R}$.
+\item Montrer que la somme $f$ de cette série de fonctions est $C^{\infty}$, croissante sur $\mathbb{R}$, admet une limite finie en $+ \infty$, mais que $f'$ est non bornée au voisinage de $+ \infty$.\\
+%Indications : $\Sigma f_n$ est normalement convergente sur $\mathbb{R}$, mais cela ne nous permet pas de connaître la dérivabilité de $f$.\\
+%Toutefois, $\Sigma f_n$ est stationnaire sur tout compact de $\mathbb{R}$.\\
+%On en déduit, d'après l'unicité de la limite -uniforme, ou même simple- d'une suite de fonctions, que $f$ est entièrement déterminée, sur un compact de $\mathbb{R}$, par l'une des sommes partielles de la série $\Sigma f_n$. Conclure, on appliquera le théorème des accroissements finis à $f$ sur des intervalles bien choisis.
+\end{enumerate}
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[R\'ealisation d'un ferm\'e de $\mathbb{R}$ comme ensemble des z\'eros d'une fonction $C^{\infty}$]
+\begin{enumerate}
+\item Montrer que tout ouvert de $\mathbb{R}$ est une union disjointe d'intervalles ouverts, et que cette union est d\'enombrable.
+\end{enumerate}
+%\newcounter{stock}
+\setcounter{stock}{\value{enumi}}
+Soit maintenant $F$ un ferm\'e de $\mathbb{R}$, on note $O$ son compl\'ementaire. D'apr\g{e}s la question pr\'ec\'edente, on peut \'ecrire :
+\[O=\bigsqcup\limits_{n\in\mathbb{N}}I_n\text{ o\g{u} $(I_n)$ est une suite d'intervalles ouverts disjoints.}\] 
+On admet qu'il existe, pour tout intervalle ouvert $I$ de $\mathbb{R}$, une fonction $f_I$ d\'efinie et de classe $C^{\infty}$ sur $\mathbb{R}$, %
+non nulle sur $I$ et nulle en dehors de cet intervalle, de norme infinie $1$.
+\begin{enumerate}
+\setcounter{enumi}{\value{stock}}
+\item En appliquant une op\'eration judicieusement choisie aux termes de la suite $(f_{I_n})_n$, construire une suite $g_n$ de fonctions de $C^{\infty}(\mathbb{R},\mathbb{R})$, normalement convergente, %
+dont la somme s'annulle exactement sur $F$.
+
+\emph{On remarque que la s\'erie $\sum g_n$ est \emph{ponctuellement stationnaire}.}
+\item Etude des s\'eries de d\'eriv\'ees successives de la suite $(g_n)$ :
+\begin{enumerate}
+\item Montrer que, pour tout entier naturel non nul $k$, la s\'erie $\sum g_n^{(k)}$ est ponctuellement stationnaire.
+\item Donner une condition suffisante pour la d\'erivabilit\'e de la somme $\sum\limits_{n=0}^{\infty}g_n$.
+\item Donner enfin une condition n\'ecessaire et suffisante simple à ce que la série soit %globalement stationnaire
+uniform\'ement convergente sur un ouvert \'eventuellement petit, typiquement un intervalle.
+\item Etudier les deux contre-exemples suivants :
+\begin{description}
+\item[Cas non born\'e] $O=\bigcup\limits_{n\in\mathbb{N}}\left]n,n+\frac{1}{2}\right[$ dans $\mathbb{R}$ ;
+\item[Cas born\'e] $O=\bigcup\limits_{n \in \mathbb{N}^{\ast}} \left]\frac{\|g_n\|_{\infty}}{n+1},\frac{\|g_n\|_{\infty}}{n}\right[$ dans $]0,1[$.
+\end{description}
+%\item Donner, dans le dernier cas, un exemple où l'interversion de limites avec la suite convergente de fonctions qui convergent en $0$ ne fonctionne pas. On remarquera que les intervalles considérés sont de longueurs arbitrairement petite.\\
+\end{enumerate}
+\item %[R\'esolution quantitative]
+%On note : $\underset{i \in D}{\bigcup}I_i$ la décomposition de $O$ en intervalles ouverts disjoints, %
+%$D$ est un ensemble dénombrable.
+Soit $f$ une fonction de classe $C^{\infty}$ de $\mathbb{R}$ dans $[0,1]$, nulle en dehors de $]-1,1[$, %
+strictement positive sur cet intervalle, paire, croissante sur $[-1,0]$ et telle que $f(0) = 1$.
+\begin{enumerate}
+\item Comment construit-on une fonction $f_{a,\epsilon}$, de support $[a-\epsilon ,a+\epsilon]$, positive majorée en $a$ par $a$ ?% Par exemple changement de variable affine.
+\item Construire une nouvelle suite $(h_n)_{n\in\mathbb{N}}$ de fonctions de classe $C^{\infty}$ qui converge normalement sur toute partie born\'ee de $\mathbb{R}$.
+\item Majorer les normes des d\'erivées successives des fonctions de la famille $(h_n)$.
+\item Corriger la construction précédente afin que les s\'eries de d\'eriv\'ees convergent, pour tout ordre.
+\item Conclure.
+%Indication : la norme des dérivées $k-$ièmes vaut $\frac{2}{l}^k$, à une constante multiplicative près, où $l$ est la longueur des intervalles de support. Comment compenser, uniformément en $k$, ces croissancesz polynomiales ?
+\end{enumerate}
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $f$ une application définie et deux fois dérivable sur un intervalle $I$ de $\mathbb{R}$. Supposons : $f''$ est bornée sur $I$.
+
+Montrer que $x \mapsto n\left(f\left(x + \frac{1}{n}\right) - f(x)\right)_n$ converge uniformément vers $f'$ sur $I$.
+\end{exer}
+
+\begin{exer}[Th\'eor\`eme de Dini]
+Soit $(K,d)$ un espace m\'etrique compact. %
+On consid\`ere une suite $(f_n)_n$ d'applications continues de $K$ dans lui-m\^eme, %
+qui converge simplement vers une application continue $f$ de $K$ dans $K$, de sorte que :
+\begin{center}Si $x$ est un \'el\'ement de $K$, la suite $(d(f_n(x),f(x))_n$ est d\'ecroissante.\end{center}
+Montrer que $(f_n)$ converge uniform\'ement.
+\end{exer}
+
+\begin{exer}
+Soit $(K,d)$ un espace m\'etrique compact.\\
+On consid\`ere une application $f$ de $K$ dans lui-m\^eme telle que :\[\forall (x,y) \in K^2 , d(f(x),f(y)) < d(x,y)\]
+\begin{enumerate}
+\item Montrer que $f$ admet un unique point fixe $x_0$.
+\item Montrer que, pout tout \'el\'ement $x$ de $K$, la suite $(f_n(x))$ converge vers $x_0$.
+\item A l'aide du th\'eor\`eme de Dini, montrer que cettte convergence est uniforme.
+\end{enumerate}
+\end{exer}

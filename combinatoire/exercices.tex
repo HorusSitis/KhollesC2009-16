@@ -1,0 +1,162 @@
+\section{Exercices}
+
+\begin{exer}
+Soit $(u_n)$ la suite numérique définie par :
+$u_0 = 1$ ; $u_1 = 1$ ; $\forall n \in \mathbb{N} , u_{n+2} = u_{n+1} + 2u_n +(-1)^n$
+On se propose de déterminer une formule du terme général de $(u_n)$, par la méthode dite des séries génératrices.
+\begin{enumerate}
+\item Montrer que : \[\forall n \in \mathbb{N} , u_n < 2^{n+1} - 1\]
+et en déduire une minoration du rayon de convergence de la série entière $\sum z \mapsto u_n z^n$.
+
+Cette série entière est appelée série génératrice de $(u_n)$.
+\item Soit $f$ la somme de cette série sur son disque de convergence. %
+Exprimer simplement $f(z)$, pour tout complexe $z$ dans ce domaine.
+%Indications : (i) Utiliser la relation de récurrence qui définit $(u_n)$.\\
+%(ii) Considérer, en premier lieu, le développement en série entière de la fonction $z \mapsto f(z) - z - 1$.\\
+\item En déduire une formule de $u_n$.
+%Indication : s'il ne l'a pas fait spontanément dans la question précédente, j'invite l'élève à décomposer la fonction rationelle $f$ en éléments simples.\\
+%\textit{Je pose alors la question de la généralisation de cette démarche à la détermination des termes généraux d'autres suites, et celle de la nécessité de l'utilisation de l'analyse dans ces calculs -unicité du développement en série entière d'une fonction réelle ou complexe lorsque le rayon de convergence est non nul et manipulation d'une telle fonction sur son disque de convergence.\\
+%J'indique que dans cet exercice, l'analyse, dont
+%la question 1) quantifie le cadre de l'utilisation, intervient dès
+%la question 2) lorsque l'on vérifie que la formule établie a bien un sens, et conjointement à cette formule par le biais de l'unicité du développement en série entière dans
+%la question 3) où l'on résout le problème initial.\\
+%J'ajoute que cependant, pour cette question et pour des problèmes apparentés qui se résolvent de la même manière, tout recours à l'analyse est superflu.\\
+%En effet, l'utilisation de la relation de récurrence définissant $(u_n)$ pour relier $f$ à des polynômes, puis la décomposition en éléments simples de la fraction rationelle obtenue, sont possibles dans le cadre purement algébrique des séries formelles et des séries de Laurent, qui est l'objet d'un autre exercice sur cette planche.}
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $F_n$ la suite de Fibonacci, définie par :\[F_0 = 0 ; F_1 = 1 ; \forall n \in \mathbb{N} , F_{n+2} = F_{n+1} + F_n\]
+\begin{enumerate}
+\item Calculer la fonction génératrice de $(F_n)$ -je définis ce terme, si cela s'avère nécessaire.
+\item En déduire une formule explicite du terme général de $(F_n)$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+On définit, pour tout entier naturel $n$, le $n-$ième nombre de Bell $B_n$ comme le nombre de partitions d'un ensemble à $n$ éléments.\\
+\begin{enumerate}
+\item Calculer $B_1$, $B_2$, $B_3$. Montrer que : $\forall n \in \mathbb{N} , B_{n+1} = \sum\limits_{k=0}^n C_n^k B_k$.
+
+On appelle série génératrice exponentielle des nombres de Bell la série entière -réelle- %
+$\sum x \mapsto \frac{B_n}{n!} x^n$.
+\item Minorer le rayon de convergence de cette série entière, et exprimer cette fonction sur son disque de convergence.
+\item En déduire une formule explicite du terme général de $B_n$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Nombre de d\'erangements et série génératrice]
+\begin{enumerate}
+\item Montrer, à l'aide d'un argument combinatoire, que :\[\forall n \in \mathbb{N} n! = \sum\limits_{k=0}^n C_n^k D_{n-k}\]
+On connaît ainsi une "transformée" de la suite $(D_n)$. Les calculs sont ici plus commodes avec la suite $\left(\frac{D_n}{n!}\right)$, la série formelle $\sum \frac{D_n}{n!} X^n$ est appelée série génératrice exponentielle de la suite $(D_n)$.\\
+\item A l'aide d'une équation déduite de la formule établie à la question 1., calculer la série génératrice de $(D_n)$.\\
+\item En déduire une formule explicite pour $D_n$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Dérangements, autre méthode]
+\begin{enumerate}
+\item Montrer, à l'aide d'un argument combinatoire, que :\[\forall n \in \mathbb{N}^{\ast} D_{n+1} = n(D_n + D_{n-1})\]
+%Indication : on discutera suivant la position de $n+1$ dans la décomposition en cycles d'un dérangement de $[1,n+1]$.\\
+\item En déduire : \[\forall n \in \mathbb{N}^{\ast} D_n = n D_{n-1} + (-1)^n\]
+\item Donner une formule explicite pour $D_n$.
+%Indication -?- : on utilise encore $(\frac{D_n}{n!})$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Un chef d'entreprise décide de distribuer des badges à ses employés, qui seront chacun identifiés par un numéro à cinq chiffres, %
+afin de r\'eguler l'entr\'ee des diff\'erents locaux d'un site de production. %
+Afin de limiter les risques d'erreur liés à une mauvaise lecture de la carte d'un employé, %
+chaque numéro devra différer des numéros déjà affectés, de deux chiffres au moins.
+\begin{enumerate}
+\item Combien de badges est-il possible de réaliser compte tenu de cette contrainte ?
+\item Pour les élèves de l'option informatique : écrire un algorithme, par exemple dans le langage Caml, %
+donnant une distribution optimale de badges pour quatre chiffres.
+\end{enumerate}
+\end{exer}
+
+%\subsection{Illustrer}
+
+\begin{exer}
+\begin{multicols}{2}
+%
+%\columnbreak
+%
+Combien trouve-t-on de parall\'elogrammes sur cette figure ?
+
+\columnbreak
+
+\psset{unit=0.6cm,algebraic=true}
+\begin{pspicture*}(0,0)(6,6)
+\pstilt{75}{
+\psaxes[xAxis=true,yAxis=true,labels=none]{->}(0,0)(5,5)
+%\psline[linewidth=1pt]
+\multido{\na=1+1,\nb=5+-1}{5}%{\psframe(0,\n)(5-\n,1+\n)}
+{\psline(0,\na)(\nb,\na)}
+\multido{\na=1+1,\nb=5+-1}{5}%{\psframe(0,\n)(5-\n,1+\n)}
+{\psline(\na,0)(\na,\nb)}
+}
+\end{pspicture*}
+
+
+\psset{xunit=0.5cm,yunit=0.5cm}%,algebraic=true}
+\end{multicols}
+\end{exer}
+
+%\begin{pspicture*}(0,0)(5,5)
+%\pspolygon(0,0)(1,0)(1.2,1)(0.2,1)
+
+%\psaxes[xAxis=true,yAxis=true]{->}(0,0)(-2,-4)(2,4)
+
+%\psline[linecolor=ldgris,linewidth=0.4pt,linestyle=dashed]{*-*}(4,6)(6,6)
+
+%\psline[linecolor=black,linewidth=0.6pt,linestyle=dotted]{*-}(5,1)(5.8,1)
+%\psline[linecolor=black,linewidth=0.6pt,linestyle=dotted]{*-}(2,3)(2,3.8)
+%\end{pspicture*}
+
+
+
+\begin{exer}[Labyrinthes]
+Soit $n$ un entier naturel non nul. On construit un labyrinthe, sur un carr\'e de $n\times n$ cases entour\'e de murs infranchissables, %
+en ajoutant des parois aux bords des $n^2$ cases.
+\begin{multicols}{2}
+Cas $3\times 3$ : 5 parois, bloquage.
+
+\vspace{3cm}
+
+Cas $4\times 4$ : 9 parois. Chaque case est accessible depuis n'importe quelle autre.
+\columnbreak
+
+\psset{unit=1cm}
+\begin{pspicture*}(0,0)(3,3)
+\psframe[linewidth=1.8pt](0,0)(3,3)
+\psframe[fillstyle=solid,fillcolor=gray](0,2)(2,3)
+\psgrid[gridwidth=0.6pt,gridcolor=darkgray,subgriddiv=1,gridlabels=0](0,0)(3,3)
+\psline[linewidth=0.9pt](0,2)(2,2)
+\psline[linewidth=0.9pt](2,2)(2,3)
+\psline[linewidth=0.9pt](1,0)(1,1)
+\psline[linewidth=0.9pt](1,1)(2,1)
+\end{pspicture*}
+
+\bigskip
+
+\psset{unit=0.8cm}
+\begin{pspicture*}(0,0)(4,4)
+\psframe[linewidth=1.8pt](0,0)(4,4)
+\psgrid[gridwidth=0.6pt,gridcolor=gray,subgriddiv=1,gridlabels=0](0,0)(4,4)
+\psline[linewidth=0.9pt](0,3)(2,3)
+\psline[linewidth=0.9pt](0,2)(1,2)
+\psline[linewidth=0.9pt](0,1)(1,1)
+\psline[linewidth=0.9pt](2,0)(2,2)
+\psline[linewidth=0.9pt](3,1)(4,1)
+\psline[linewidth=0.9pt](3,2)(4,2)
+\psline[linewidth=0.9pt](3,3)(3,4)
+%\psline[linewidth=0.5pt](2,2)(2,3)
+%\psline[linewidth=0.5pt](0,2)(2,2)
+\end{pspicture*}
+\end{multicols}
+D\'eterminer, en fonction de $n$, le nombre maximal de parois que l'on peut ajouter en gardant le labyrithe connexe, %
+c'est-\g{a}-dire de sorte que l'on puisse atteindre une case quelconque du labyrithe depuis n'importe quelle autre, %
+compte tenu des contraintes impos\'ees par les quatre murs d'enceinte et les parois.
+\end{exer}

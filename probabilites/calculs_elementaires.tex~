@@ -1,0 +1,27 @@
+\section{calculs \'el\'ementaires}
+
+\begin{exer}[Une distraction du savant cosinus]
+%\begin{center}
+%\begin{minipage}{0.8\linewidth}
+\textit{N voyageurs (au moins deux) s'apprêtent à monter dans un avion contenant N places num\'erot\'ees. %
+Le premier d'entre eux s'av\`ere être le savant cosinus qui, distrait comme il l'est toujours, ne regarde pas le num\'ero de sa r\'eservation. %
+Les passagers suivants, quand ils montent, en ordre, dans l'avion, s'asseyent alors \`a leur place r\'eserv\'ee si elle est encore libre, %
+et sinon choisissent une place au hasard parmi celles qui restent.}
+%\end{minipage}
+%\end{center}
+\ligneinter
+\begin{enumerate}
+\item Calculer, par r\'ecurrence sur $N$, la probabilit\'e $p_N$ que le dernier passager soit assis \`a sa place.
+\item Retrouver le r\'esultat pr\'ec\'edent par un argument direct.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+On jette plusieurs fois de suite et ind\'ependamment une pi\`ece de monnaie non \'equilibr\'ee, la probabilit\'e de tomber sur "Pile" est un r\'eel $p$ compris entre $0$ et $1$ strictement.\\
+Calculer :
+\begin{enumerate}
+\item La probabilit\'e de ne pas avoir de "Face" au cours des $n$ premiers jets pour tout $n$ sup\'erieur \`a $1$ ;
+\item La prpobabilit\'e d'obtenir "Face" pour la premi\`ere fios au $n-$i\`eme jet ;
+\item l'esp\'erance du nombre de jets jusqu'\`a la premi\`ere apparition de "Face".
+\end{enumerate}
+\end{exer}

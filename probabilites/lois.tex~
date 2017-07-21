@@ -1,0 +1,56 @@
+\begin{exer}[Recensement d'une population d'\'ecureuils]
+%\begin{center}
+%\begin{minipage}{\0.8\linewidth}
+\textit{On veut estimer le nombre $N$ d'\'ecureuils dans une for\^et. %
+Pour cela on en capture $k$, on leur met une petite marque sur la patte et on les rel\^ache. %
+Une semaine apr\`es (on suppose qu'aucun \'ecureuil est mort ou n\'e dans cet intervalle), %
+on en capture $l$ et on compte ceux d'entre eux qui portent la marque.}
+%\end{minipage}
+%\end{center}
+\ligneinter
+\begin{enumerate}
+\item Calculer la probabilit\'e d'observer une valeur $m$ \'ecureuils marqu\'es  en fonction de $N$, $k$ et $l$.
+\item Calculer, quand $N$ est grand, la valeur $N_{max}$ pour laquelle la probabilit\'e ci-dessus est la plus grande. On appelle cette valeur \textit{estimateur du maximum de vraisemblance} pour le nombre d'\'ecureuils.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $(X_n)$ une suite de variables al\'eatoires de lois respectives $\mathcal{B}(n,p_n)$ o\`u $np_n$ est constant, de valeur unique $\lambda$.\\
+On note, pour tout $n$ : $A_n = (X_n \geq 1)$.\\
+Soit, de plus, $Y$ une variable de Poisson de param\`etre $\lambda$.\\
+Montrer, pour $j$ fix\'e et sup\'erieur \`a $1$, que :\[\mathbb{P}(X_n=j|A_n)\underset{n\rightarrow +\infty}{\longrightarrow}\mathbb{P}(Y=j|y\geq 1)\]
+\end{exer}
+
+\begin{exer}
+Soit $X$ une variable al\'eatoire de loi $\mathcal{B}(n,p)$.\\
+Quel entier $j$ compris entre $0$ et $n$, maximise $\mathbb{P}(X=j)$ ?
+\end{exer}
+
+\begin{exer}[Optimisations avec la loi de Poisson]
+\begin{enumerate}
+\item Soit $\lambda$ un r\'eel strictement positif. Quel entier $j$ maximise $\mathbb{P}(X=j)$, pour une variable de Poisson de param\`etre $\lambda$ ?
+\item Soit $j$ un entier positif. Quel est le r\'eel $\lambda$ pour lequel $\mathbb{P}(X=j)$ et maximal, o\`u $X$ est choisie avec une loi $\mathcal{P}(\lambda)$ ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $X$ une variable al\'eatoire de loi $\mathcal{G}(p)$.\\
+Montrer que :\[\mathbb{E}\left(\frac{1}{1+X}\right)=\ln((1-p)^{\frac{p}{p-1}}))\]
+\end{exer}
+
+%\newpage
+
+\begin{exer}
+On jette plusieurs fois de suite et ind\'ependamment une pi\`ece de monnaie non \'equilibr\'ee, la probabilit\'e de tomber sur "Pile" est un r\'eel $p$ compris entre $0$ et $1$ strictement.\\
+Calculer :
+\begin{enumerate}
+\item La probabilit\'e de ne pas avoir de "Face" au cours des $n$ premiers jets pour tout $n$ sup\'erieur \`a $1$ ;
+\item La prpobabilit\'e d'obtenir "Face" pour la premi\`ere fios au $n-$i\`eme jet ;
+\item l'esp\'erance du nombre de jets jusqu'\`a la premi\`ere apparition de "Face".
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $p$ un réel compris, strictement entre $0$ et $1$, et soient $X$ et $Y$ deux variables al\'eatoires ind\'ependantes, de m\^eme loi $\mathcal{B}(p)$.\\
+Donner les lois de $max(X,Y)$ et $min(X,Y)$.
+\end{exer}

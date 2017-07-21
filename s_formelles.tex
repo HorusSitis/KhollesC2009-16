@@ -1,0 +1,98 @@
+\section{Séries formelles à une indéterminée}
+
+\begin{exer}[Anneau des séries formelles à une indéterminée]
+Soit $\mathbb{K}$ un corps commutatif.\\
+On appelle série formelle à une indéterminée à coefficients dans $\mathbb{K}$ touts suite $(a_n)$ d'éléments de $\mathbb{K}$, %
+et on note $\mathbb{K}[[X]]$ l'ensemble de ces suites, que l'on munit de se structure canonique d'espace vectoriel. %
+On définit, de plus, le produit de Cauchy $\cdot$ par :
+\[\forall ((a_n),(b_n)) \in \mathbb{K}[[X]]^2 , (a_n)\cdot(b_n) = \left(\sum\limits_{i+j=n} a_i b_j\right)\]
+\begin{enumerate}
+\item Montrer que ce produit munit $\mathbb{K}[[X]]$ d'une structure d'algèbre commutative. Que dire de l'algèbre $\mathbb{K}[X]$ ?
+
+On note, de même que pour $\mathbb{K}[X]$, $X$ la série formelle $(\delta_{1n})_{n \in \mathbb{N}}$, et on écrit, %
+pour toute suite $(a_n)$ de $\mathbb{K}$ :
+\[(a_n) = \sum\limits_{n=0}^{+ \infty} a_n X^n\]
+%Noter que cette écriture est purement conventionelle, elle n'a aucune signification algébrique -la famille des coefficients d'une combinaison linéaire est à support fini-, ni analytique -le rayon de convergence de la série entière associée peut être nul.
+%Lorsque $\lambda$ est un scalaire et $p$ un entier naturel, la série formelle $\lambda X^p$ est appelée monôme.\\
+%Ceci dit, le symbole somme est compatible avec l'addition, à une série formelle, d'une combinaison linéaire de monômes.\\
+\item Pour toute série formelle $S$, on appelle ordre de $S$ l'entier $\omega (S)$ défini par :
+\[\forall (a_n) \in \mathbb{K}[[X]] , \omega \left(\sum\limits_{n=0}^{+ \infty}a_nX^n\right) := \inf \{ n \in \mathbb{N}\cup\{+ \infty\} / a_n \neq 0 \}\]
+\begin{enumerate}
+\item Quel est l'ordre d'un polynôme ?
+\item Montrer que :\[\forall (S,T) \in \mathbb{K}[[X]]^2 , \omega(S+T) \geq \inf(\omega(S),\omega(T)) \wedge \omega(ST) = \omega(S) + \omega(T)\]
+\item En déduire que $\mathbb{K}[[X]]$ est un anneau intègre.
+\end{enumerate}
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Substitution dans des s\'eries formelles, une application]
+Dans des conditions relativement simples, %
+on peut extrapoler la composition des fonctions telle qu'elle se traduit en termes de développements en série entière : %
+on parle alors de subsitution d'une s\'erie formelle $S$ \`a l'ind\'etermin\'ee dans une s\'erie formelle $T$. On écrit ainsi :
+\[T \circ S = \sum\limits_{n=0}^{+ \infty} t_n S^n\]
+o\`u $T$ est la s\'erie formelle $\sum\limits_{n=0}^{+\infty}t_n X^n$.\\
+Bien s\^ur, on se heurte ici \`a la difficulté de la sommation infinie $\sum t_n S^n$, %
+qui n'est pas \textit{a priori} une opération permise dans l'anneau $\mathbb{K}[[X]]$.
+\begin{enumerate}
+\item Construire explicitement la s\'erie $T(S)$ dans les deux cas suivants :
+\begin{enumerate}
+\item $T$ est un polyn\^ome ;
+\item $S$ est de module non nul. %ce qui nous donne la formule $(T \circ S)_n = \sum\limits_{k=0}^n t_k (S^k)_n$
+\end{enumerate}
+
+Montrer que $T(S)$ ne peut \^etre construite que dans ces deux cas.
+
+\medskip
+Soit maintenant $S$ une série formelle d'ordre non nul. %
+\item Montrer que \mbox{$\mathbb{K}[[X]] \rightarrow \mathbb{K}[[X]] : T \mapsto T \circ S$} est un endomorphisme d'algèbre unitaire.
+%La question difficile est la multiplicativité. Soient $T_1=\sum\limits_{n=0}^{+\infty}t_n^1X^n$ et $T_2=\sum\limits_{n=0}^{+\infty}t_n^2X^n$.
+%On veut calculer T_1T_2(S)...
+%
+%Il faut montrer l'égalité de sommes triangulaire-rectangulaire : \[\sum\limits_{k=0}^n \sum\limits_{a+b=k} t_a^1 t_b^2 (S^a)_i (S^b)_j\overset{?}{=}\sum\limits_{a \in [\![0,i]\!] b \in [\![0,j]\!]} t_a^1 (S^a)_i t_b^2 (S^b)_j\]
+%car $(S^x)_y$ est nul si $x > y$.
+%\ligneinter
+
+\medskip
+\textit{On s'int\'eresse maintenant \`a l'inversion dans l'anneau $\mathbb{K}[[X]]$.}
+\item Montrer que $1-X$ est inversible dans l'anneau intègre $\mathbb{K}[[X]]$.
+\item Montrer qu'une série formelle est inversible si et seulement si son ordre est nul.
+%Indication : on peut considérer une série formelle $U$ dont le coefficient de degré $0$ est $1$, puis inverser $(1-(1-U))$ -quels résultats utilise-ton ?\\
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Rationalité et séries formelles]
+Dans cet exercice, on pourra utiliser le résultat suivant concernant les séries formelles inversibles :\\
+\textit{Une s\'erie formelle $S$ est inversible si et seulement si son module $\omega (S)$ est nul, %
+c'est \`a dire si et seulement si son coefficient constant $s_0$ est non nul.}
+\begin{enumerate}
+\item Montrer qu'une fraction rationelle peut être représentée par une série formelle si et seulement si %
+elle n'admet pas $0$ pour pôle.
+\item Montrer qu'une série formelle $\sum\limits_{n=0}^{+ \infty} a_n X^n$ est une fraction rationelle %
+si et seulement s'il existe une entier naturel $d$ et une famille $(\alpha_k)_{k \in [\![0,d]\!]}$ telle que :
+\[\exists N \in \mathbb{N} / \forall n \in [\![N,+\infty [\![ , \sum\limits_{k=0}^{d} a_{n+k} \alpha_{d-k} = 0\]
+\end{enumerate}
+%On définit l'algèbre $\mathbb{K}((X))$ des séries de Laurent à coefficients dans $\mathbb{K}$ comme étant $\mathbb{K}[[X]][\frac{1}{X}]$
+%\item Montrer que cette algèbre est un corps qui inclut une réalisation de $\mathbb{K}(X)$.
+\end{exer}
+
+\begin{exer}[D\'erivation des s\'eries formelles]
+Soit $D$ l'application de $\mathbb{K}[[X]]$ dans lui-même définie par :
+\[\forall (a_n) \in \mathbb{K}^{\mathbb{N}} , D\left(\sum\limits_{n=0}^{+ \infty} a_n X^n\right) = %
+\sum\limits_{n=1}^{+ \infty} n a_n X^{n-1}\]
+\begin{enumerate}
+\item Montrer que $D$ est une dérivation de l'algèbre des séries formelles à coefficients dans $\mathbb{K}$, %
+c'est-à-dire un endomorphisme d'espace vectoriel vérifiant :\[\forall (S,T) \in \mathbb{K}[[X]]^2 , D(ST) = D(S)T + SD(T)\]
+\item Montrer que réciproquement, $D$ est la seule dérivation de $\mathbb{K}[[X]]$ telle que : $D(X)=1$.
+
+\textit{Indications :} soit en effet $\Delta$ une telle d\'erivation.
+\begin{enumerate}
+\item Calculer $\Delta (P)$, pour tout polyn\^ome $P$ sur $\mathbb{K}$.
+\item Montrer que : $\forall n \in \mathbb{N}^{\ast},\forall R\in \mathbb{K}[[X]], %
+R\in X^n\mathbb{K}[[X]]\Rightarrow \Delta (R)\in X^{n-1}\mathbb{K}[[X]]$.
+\item Calculer $\Delta (S)$ pour tout $S$ de $\mathbb{K}[[X]]$, %
+on recherchera une d\'ecomposition de $S$ en somme de deux s\'eries formelles bien choisies.
+\end{enumerate}
+\item R\'esoudre, dans $\mathbb{K}[[X]]$, l'\'equation en $S$ : $D(S)=S$.
+%Logarithmes ?
+\end{enumerate}
+\end{exer}

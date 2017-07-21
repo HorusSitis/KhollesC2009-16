@@ -1,0 +1,38 @@
+\section{D\'eveloppements en s\'erie enti\g{e}re}
+
+\begin{ques}
+Donner le développement en s\'erie enti\g{e}re; au voisinage de $0$, de la fonction $\arg \tanh$.
+\end{ques}
+
+\begin{ques}
+Donner le d\'eveloppement en s\'erie enti\g{e}re, au voisinage de $0$, de la fonction $\arg \sinh$.
+\end{ques}
+
+\begin{ques}
+Donner le d\'eveloppement en s\'erie enti\g{e}re, au voisinage de $0$, de la fonction $\arg \cosh$.
+\end{ques}
+
+\begin{ques}
+Soit $\alpha$ un r\'eel quelconque. Donner le d\'eveloppement en s\'erie enti\`ere de la fonction $x\mapsto (1+x)^{\alpha}$.
+\end{ques}
+
+\begin{ques}
+Donner le développement en série entière; au voisinage de $0$, de la fonction $\arctan$.
+\end{ques}
+
+\begin{ques}
+Donner le d\'eveloppement en s\'erie enti\g{e}re, au voisinage de $0$, de la fonction $\arcsin$.
+\end{ques}
+
+\begin{ques}
+Donner le d\'eveloppement en s\'erie enti\g{e}re, au voisinage de $0$, de la fonction $\arccos$.
+\end{ques}
+
+\begin{ques}
+Donner le d\'evelppoement en s\'erie enti\g{e}re au voisinage de $0$ de $x\mapsto\ln (1+x)$. %
+Peut-on prolonger ce d\'eveloppement au bord de l'intervalle de convergence ?
+\end{ques}
+
+\begin{ques}
+Donner un d\'eveloppement en s\'erie enti\`ere de la fonction $x\mapsto\frac{\sin x}{x}$ au voisinage de $0$.
+\end{ques}

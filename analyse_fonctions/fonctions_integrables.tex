@@ -1,0 +1,106 @@
+\section{Fonctions int\'egrables}
+
+\begin{exer}
+\begin{enumerate}
+\item Soient $a$ et $b$ deux réels positifs non tous les deux nuls. %
+Etudier l'intégrabilité sur $]0,1]^{2}$ de $(x,y) \mapsto 1/(ax + by)$.
+\item Soit $P$ une application polynomiale qui ne s'annulle, sur $[0,1]^{2}$, qu'en $(0,0)$. %
+On suppose, de plus, que $P$ s'écrit: $aX + bY + Q$, où $a$ et $b$ sont deux réels strictement positifs, %
+et $Q$ une somme de monômes de degré au moins $2$.
+
+Montrer que $1/P$ est intégrable sur $]0,1]^{2}$.
+\item Même question, en supposant: $P = aX + Q$, avec la même notation.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Orthogonalit\'e avec des polyn\^omes]
+On se place ici sur l'intervalle $[0,1]$.
+\begin{enumerate}
+\item Que dire d'une application continue de $[0,1]$ dans $\mathbb{R}$ telle que :
+\[\forall p \in \mathbb{R}[X] , \int\limits_0^1 f(t)P(t) dt = 0\]
+\item On fixe : $n \in \mathbb{N}$. %
+Soit $f$ une application continue de $[0,1]$ dans $\mathbb{R}$ telle que :
+\[\forall k \in [0,n] , \int\limits_0^1 x^k f(x) dx = 0\]
+Montrer que $f$ admet au moins $n+1$ z\'eros dans $[0,1]$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soient $a$ et $b$ deux réels positifs.\\
+Montrer que $\int\limits_0^{\infty} \frac{\exp(-at)}{1 - \exp(-bt)} dt$ existe %
+et vaut $\sum\limits_0^{\infty} \frac{1}{(a + nb)^2}$.
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Soient $p$ et $q$ deux réels strictement positifs.
+\begin{enumerate}
+\item Montrer que $\int\limits_0^{\infty} \frac{x^{p-1}}{1+x^q} dx$ existe et vaut $\sum\limits_0^{\infty} \frac{(-1)^k}{p+kq}$.
+\item Ecrire des formules explicites pour $\frac{\pi}{4}$ et $\ln 2$.
+\end{enumerate}
+
+Soit maintenant $p$ un réel compris entre $0$ et $1$, strictement.
+\item Montrer que l'intégrale $\int\limits_0^{\infty} \frac{x^{p-1}}{1+x} dx$ existe et vaut
+\[\frac{1}{p} + \sum\limits_0^{\infty} \frac{2p}{p^2 - n^2}\]
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Montrer que la série de fonctions de terme général $x \mapsto n \exp{-nx}$, définies sur $[1 , + \infty [$, %
+converge simplement, que la somme de cette série est intégrable, calculer son intégrale.
+\end{exer}
+
+\begin{exer}
+Déterminer les fonctions réelles continues $f$ telles que :
+\[\forall (x,h) \in \mathbb{R}^2 , f(x) = \frac{1}{2h} \int\limits_{x-h}^{x+h} f(t) dt\]
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Soit $f$ une fonction réelle positive, décroissante et intégrable sur $]0,1]$. Etudier la limile en $0$ de la fonction $x \mapsto xf(x)$.
+\item Même question, en $+ \infty$, pour une fonction définie sur $\mathbb{R}_+$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Soit $f$ une fonction continue définie sur $\mathbb{R}_+$. On suppose que $f$ est intégrable. %
+F tend-elle vers $0$ en $+ \infty$ ?
+\item Montrer qu'une fonction réelle intégrable sur $\mathbb{R}_+$, uniformément continue, tend vers $0$ en $+ \infty$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Intégrabilité et produit]%Pas de Cauchy dans la solution, même si la prorpiété de Cauchy sous-tend l'exercice avec la convergence absolue des intégrales.
+%Cf Cassini, analyse 3, p 186 pour l'exercice complet avec sa troisième question, semi-convergence.
+\begin{enumerate}
+\item Soit $u$ une fonction continue et bornée sur $\mathbb{R}$. Montrer que %
+pour toute fonction réelle $v$ intégrable sur $\mathbb{R}$, $uv$ est intégrable sur $\mathbb{R}$.
+\item Montrer que réciproquement, si $u$ est une fonction continue de $\mathbb{R}$ dans $\mathbb{R}$ telle que, %
+pour toute fonction intégrable $v$, $uv$ est intégrable, alors $u$ est bornée sur $\mathbb{R}$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soient $a$ et $b$ deux réels tels que $a < b$, $f$ une application continue de $[a,b]$ dans $\mathbb{R}$.\\
+Montrer que :\[\int_a^b f(t) | \sin nt | dt \underset{n\rightarrow + \infty}{\longrightarrow} \frac{2}{\pi} \int_a^b f\]
+%Indications :\\
+%i) Constater que $\frac{2}{\pi}$ est la valeur moyenne de la fonction continue $\pi -$périodique $t \mapsto | \sin t |$, et de ses composées à droite par les fonctions $t \mapsto nt$.\\
+%ii) Appliquer une égalité de la moyenne sur des intervalles bien choisis.\\
+%Cette égalité est : si $g$ est une application continue d'un segment $I$ dans $\mathbb{R}$, et $h$ une fonction positive, intégrable au sens de Riemann, définie sur $I$, alors :\begin{center}$\exists c \in I / \int_I gh = g(c) \int_I h$\end{center}
+%iii) En déduire une relation entre les termes de la suite d'intégrales considérée et des sommes de Riemann de $f$ sur des intervalles bien choisis, puis sur $[a,b]$.\\
+%iv) Montrer que les intégrales résiduelles tendent vers $0$ quand $n$ tend vers $+ \infty$. Conclure.
+\end{exer}
+
+\begin{exer}
+Soient $a$ et $b$ deux réels tels que $a < b$, et $f$ une application continue de $[a,b]$ dans $\mathbb{R}$.\\
+Déterminer la limite de la suite :\[\left(\int_a^b \frac{f(x)}{3 + 2 \cos nx} dx \right)_{n \in \mathbb{N}}\]
+%On peut procéder de la même manière que dans l'exercice précédent, puis calculer la valeur moyenne de $x \mapsto \frac{1}{3 + 2 \cos x}$.\\
+%Indications supplémentaires :\\
+%Il suffit de développer cette fonction en série de puissances de $\frac{2}{3} \cos$. On peut intervertir les signes somme -pourquoi ?-, les termes de la nouvelle somme se calculent, par exemple, à l'aide des intégrales de Wallis.
+\end{exer}
+
+\begin{exer}
+Soit $(a_n)_n$ une suite complexe telle que : $\sum a_n n!$ converge.\\
+Montrer que $\int\limits_0^{+\infty} e^{-x}\sum\limits_{n=0}^{+\infty}a_nx^n dx$ existe et vaut %
+$\sum\limits_{n=0}^{+\infty}n! a_n$.
+\end{exer}

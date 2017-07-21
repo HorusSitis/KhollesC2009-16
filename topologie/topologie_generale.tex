@@ -1,0 +1,116 @@
+\section{Topologie g\'en\'erale}
+
+\begin{exer}
+\begin{enumerate}
+\item Rappeler la définition axiomatique des ouverts, et des fermés d'un espace topologique -ici le plus souvent, un espace vectoriel normé.
+
+\smallskip
+Soit $(E,d)$ un espace métrique, par exemple une partie d'un espace vectoriel normé munie de la distance associée à la norme.
+\item Quelle est la caractérisation des ouverts de $E$ par la distance -boules ouvertes ?
+\item Montrer que tout fermé de $E$ est intersection d'une suite d'ouverts.
+%Indication : utiliser la caractérisation séquentielle des fermés dans un espace métrique.\\
+\item Montrer que tout ouvert de $E$ est la réunion d'une suite de fermés.
+\item Que penser d'une intersection infinie d'ouverts, d'une union infinie de fermés, dans un espace métrique ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $(E,d)$ un espace métrique.
+\begin{enumerate}
+\item L'adhérence d'une boule ouverte est-elle nécessairement la boule fermée de même centre et de même rayon ?
+\item Montrer que c'est le cas si $E$ est un espace vectoriel normé.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Ouverts de $\mathbb{R}$]
+\begin{enumerate}
+\item Montrer qu'un ouvert de $\mathbb{R}$ est réunion disjointe d'une famille d'intervalles ouverts.
+%Indication : Considérer les intervalles maximaux de l'ouvert.\\
+\item Montrer que cette union est au plus dénombrable.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Le m\^eme, avec des questions interm\'ediaires]
+Soit $U$ un ouvert de $\mathbb{R}$. On se propose d'\'etablir le d\'ecomposition suivante :
+\[U=\bigsqcup\limits_{d\in D} I_d\]
+o\`u $(I_d)$ est une famille d'intervalles ouverts, disjoints deux \`a deux, index\'ee dans un ensemble $D$ au plus d\'enombrable.
+
+On suppose que $U$ est non vide, le cas contraire \'etant trivial.
+\begin{enumerate}
+\item Soit $x$ un \'el\'ement de $U$. Construire un intervalle $I_x$, incluant tous les intervalles de $\mathbb{R}$, eux-m\^eme inclus dans $U$, qui contiennent $x$.
+\item Montrer qu'un intervalle de la forme $I_x$ construite pr\'ec\'edemment est \textit{maximal} dans $U$, c'est-\`a-dire qu'il n'est inclus strictement dans aucun intervalle de $\mathbb{R}$ inclus dans $U$.
+\item Que peut-on dire de deux intervalles maximaux de $U$ ?
+\item D\'eduire des questions pr\'ec\'edentes que $U$ est l'union disjointe de tous ses intervalles maximaux.
+\item Montrer que cette union est au plus d\'enombrable. On utilisera la topologie d'une partie bien choisie de $\mathbb{R}$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Rappeler la définition des espaces compacts par la propriété de Borel-Lebesgue.
+
+\smallskip
+Soit $K$ un espace compact.
+\item Montrer que, si $(F_i)$ est une famille de fermés de $K$ dont l'intersection est vide, alors il existe une sous-famille finie de $(F_i)$ d'intersection vide.
+\item Montrer qu'une suite décroissante de fermés non vides de $K$ a une intersection non vide.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $K $ un espace m\'etrique compact, par exemple dans un espace vectoriel norm\'e $E$.
+\begin{enumerate}
+\item Montrer qu'une suite d'\'el\'ements de $K$ converge si et seulement si elle admet une unique valeur d'adh\'erence.
+\end{enumerate}
+\newcounter{stock}
+\setcounter{stock}{\value{enumi}}
+%\smallskip
+Soient maintenant $f$ une application continue de $K$ dans lui-m\^eme, et $x_0$ un \'el\'ement de $K$. %
+On \'etudie la suite r\'ecurrente $(x_n)_n$, de premier terme $x_0$, et v\'erifiant : %
+\[\forall n \in \mathbb{N} , x_{n+1} = f(x_n)\]
+On suppose, dans toute la suite de l'exercice, que $(x_n)$ admet exactement deux valeurs d'adh\'erence $z_0$ et $z_1$.
+%\smallskip
+\begin{enumerate}
+\setcounter{enumi}{\value{stock}}
+\item Montrer que, quels que soient les voisinages $V_0$ et $V_1$ de $z_0$ et $z_1$ respectivement, %
+il existe un entier naturel $N$ tel que :
+\[\forall n \in \mathbb{N} , n \geq N \Rightarrow x_n \in V_0 \vee x_n \in V_1\]
+\item Soit $\varphi$ une extraction telle que : $(x_{\varphi(n)})_n$ converge vers $x_0$. %
+En \'etudiant la suite $(x_{\varphi(n)+1})$, montrer que :
+\[f(z_0)=z_1\]
+Un raisonnement semblable permet bien sûr de montrer que : $f(z_1)=z_0$.
+\item En utilisant les questions pr\'ec\'edentes, montrer que les suites $(x_{2n})_n$ et $(x_{2n+1})$ convergent, %
+l'une vers $z_0$, et l'autre vers $z_1$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}%Exercice \`a retravailler.
+Soit $(K,d)$ un espace métrique compact, par exemple un fermé borné d'un espace vectoriel normé de dimension finie.\\
+On considère une isométrie $f$ de $K$ dans lui-même, c'est-à-dire une application de $K$ dans $K$ qui conserve la distance.\\
+\linebreak
+\begin{enumerate}
+\item $f$ admet-elle nécessairement un point fixe ?
+\item Montrer que $f$ est surjective.
+%Indications : supposer que ce ne soit pas le cas, et considérer un élément $x_0$ de $K$ qui n'est pas dans l'image de $f$. Définir la suite $(x_n)$ des images de $x_0$ par les itérées de $f$ et montrer que $f$ induit une permutation de l'ensemble $L$ des valeurs d'adhérence de $(x_n)$. Utiliser la compacité de $K$ pour montrer que $L$ est non vide. En déduire une contradiction en considérant la suite des distances entre les termes de $(x_n)$ et $L$.\\
+%Indications : Supposer que ce ne soit pas le cas, et considérer un point de $K$ dont la distance à l'image de $f$ soit maximale -pourquoi ce point existe-t-il ?-, étudier la suite des itérées de ce point par $f$ pour déduire une contradiction.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Espaces m\'etriques encha\^in\'es]
+Dans tout l'exercice, on notera $(E,d)$ un espace m\'etrique.
+
+\smallskip
+Pour tout réel strictement positif, on définit la relation d'équivalence $\Re_{\epsilon}$ définie par :
+\begin{center}
+$x \Re_{\epsilon} y$ si et seulement si il existe une famille finie $(x_k)_{k \in [0,n]}1$ de $n+1$ points de $E$ telle que :
+\end{center}
+\[x_0 = x \wedge x_n = y \wedge \forall k \in [0,n] , d(x_k x_{k+1}) < \epsilon\]
+On peut définir la conjonction, ou intersection de ces relations d'équivalence, que nous noterons $\Re$.\\
+On dit que $(E,d)$ est \textit{bien enchaîné} -Cantor-connected- si et seulement si dux éléments de $E$ sont toujours reliés par $\Re$.
+\begin{enumerate}
+\item Soit : $\epsilon \in \mathbb{R}^{\ast}$. Montrer que les classes modulo $\Re_{\epsilon}$ sont ouvertes, puis qu'elles incluent les conposantes connexes de la topologie de $E$.
+\item Montrer qu'un espace métrique connexe pour sa topologie usuelle, est bien enchaîné.
+\item Réciproquement, un espace métrique bien enchaîné est-il nécessairement connexe ?
+%\item Que peut-on dire si $(E,d)$ est complet ?
+\item Montrer que, si $(E,d)$ est compact et bien enchaîné, alors il est connexe.
+\end{enumerate}
+\end{exer}

@@ -1,0 +1,194 @@
+\section{Enonc\'es \g{a} retravailler}
+
+\begin{exer}
+Soient $n$ un entier naturel non nul, $A$ une matrice telle que :
+\[\forall M \in M_n (\mathbb{C}) , \det (A+M) = (\det A) + (\det M)\]
+Montrer que $A$ est nulle.
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Enoncer le théorème de convergence d'un produit de Cauchy qui a été démontré en cours.
+\item Démontrer le théorème de Mertens : si $\sum u_n$ et $\sum v_m$ sont deux séries d'une algèbre normée, %
+respectivement absolument convergente et convergente, alors le produit de Cauchy de ces deux séries est convergent, de somme :
+\[(\sum\limits_{n=0}^{+ \infty} u_n)(\sum\limits_{m=0}^{+ \infty} v_m)\]
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Théorème de Stone-Weierstrass général.
+\end{exer}
+
+
+\begin{exer}
+Soit $E$ un espace préhilbertien réel, $F$ un espace vectoriel normé, et $f$ une application continue de $E$ dans $F$ vérifiant :
+\[\forall (x,y) \in E^2 , x \perp y \Rightarrow f(x+y) = f(x) + f(y)\]
+On se propose de déterminer la nature de $f$.
+\begin{enumerate}
+\item Examiner le cas où $E$ est de dimension inférieure ou égale à $1$.
+\item Que peut-on dire de $x+y$ et $x-y$ lorsque $x$ et $y$ sont deux vecteurs de $E$ de même norme ?
+\item Examiner le cas où $f$ est paire.
+\item Examiner le cas où $f$ est impaire.
+\item Examiner le cas général.
+\end{enumerate}
+\end{exer}
+
+
+\begin{exer}
+Soient $E$ un espace Euclidien de dimension $3$, $x$, $y$, et $z$ des vecteurs de $E$.\\
+Montrer :
+\[[y \wedge z, z \wedge x, x \wedge y] = ([x,y,z])^2\]
+et \[(x \wedge y)\wedge (x \wedge z) = [x,y,z]x\]
+\end{exer}
+
+\begin{exer}
+Soit $(z_n)$ une suite complexe vérifiant :
+\[\forall (n,m) \in \mathbb{N}^2 , \lvert z_n - z_m \rvert \geq 1\]
+\begin{enumerate}
+\item Soit $\alpha$ un réel strictement positif. Montrer que $\sum \frac{1}{\lvert z_n \rvert^{2 + \alpha}}$ converge.
+\item $\sum \frac{1}{\lvert z_n \rvert^2}$ converge-t-elle ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $(K,d)$ un espace métrique compact, par exemple un fermé borné d'un espace vectoriel normé de dimension finie.\\
+On considère une isométrie $f$ de $K$ dans lui-même, c'est-à-dire une application de $K$ dans $K$ qui conserve la distance.
+\begin{enumerate}
+\item $f$ admet-elle nécessairement un point fixe ?
+\item Montrer que $f$ est surjective.
+%Indications : supposer que ce ne soit pas le cas, et considérer un élément $x_0$ de $K$ qui n'est pas dans l'image de $f$. Définir la suite $(x_n)$ des images de $x_0$ par les itérées de $f$ et montrer que $f$ induit une permutation de l'ensemble $L$ des valeurs d'adhérence de $(x_n)$. Utiliser la compacité de $K$ pour montrer que $L$ est non vide. En déduire une contradiction en considérant la suite des distances entre les termes de $(x_n)$ et $L$.\\
+%Indications : Supposer que ce ne soit pas le cas, et considérer un point de $K$ dont la distance à l'image de $f$ soit maximale -pourquoi ce point existe-t-il ?-, étudier la suite des itérées de ce point par $f$ pour déduire une contradiction.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Considérons la solution $f$ l'équation différentielle $y'=1+Idy^{2}$, maximale, nulle en $0$, %
+dont on notera $I_{f}$ l'intervalle de définition.\\
+On suppose que $f$ admet un développement en série entière au voisinage de $0$.
+\begin{enumerate}
+\item Montrer que ce développement est de la forme $\sum_{n=0}^{\propto} a_{n}X^{3n+1}$ et que $(a_{n})$ vérifie:
+$a_{0}=1$ ; \[\forall n \in \mathbb{N}, (3n+4)a_{n+1}=\sum_{q=0}^{n} a_{n-q}a_{q}\]
+\item Montrer que la suite $(a_{n})$ définie par les relations ci-dessus est décroissante.
+\item Montrer que $f$ est développable en série entière au voisinage de $0$, et minorer son rayon de convergence $R$.
+\item Montrer que $R < \pi/2 - Arctan(5/4) + 1$
+\item Montrer que $I_{f}$ n'est pas borné inférieurement.
+\end{enumerate}
+\end{exer}
+
+Théorème de réalisation de Borel.
+
+Série entière semi-convergente en tout point de son cercle de convergence ?
+
+Condition de Frédéric pour la développabilité en sérien entière :\\
+Existence d'un réel strictement positif $M$ tel que :
+\[forall k \in \mathbb{N} , \frac{f^{(k)}(0)}{k!} \leq M^k\]
+??
+
+\begin{exer}
+Sous-groupes compacts de $GL_n(\mathbb{R})$, $n \in \mathbb{N}^{\ast}$.\\
+Cet exercice utilise le résultat suivant :
+\textit{
+Soit un espace vectoriel normé $E$, une partie compacte et convexe $K$ de $E$ et un groupe $G$ affine, %
+équicontinu -les normes des parties linéaires sont majorées par une constante $M$ fixée-, sur $E$ qui laisse stable $K$. %
+Il suffit par exemple que $G$ soit compact. %
+Alors les éléments de $G$ admettent un point fixe commun dans $K$.
+}
+Soit $G$ un sous-groupe compact de $GL_n(\mathbb{R})$. %
+On se propose de montrer que $G$ est conjugué à un sous-groupe de $O_n(\mathbb{R})$, %
+soit que les éléments de $G$ préservent un produit scalaire.
+%On étudie à cette fin l'action de $G$ sur l'ensemble des produits scalaires de $\mathbb{R}^n$, il s'agit de prouver que cette action admet un point fixe.\\
+\begin{itemize}
+\item Montrer que l'ensemble $S_n^{++}(\mathbb{R})$ est convexe.
+\item Que dire de l'ensemble des termes de la famille $(^tMM)_{M \in G}$ ?
+\item Etudier l'adhérence de son enveloppe convexe.
+\item Conclure à l'aide de la propriété des groupes affines compacts énoncée au début de cet exercice.
+\end{itemize}
+\end{exer}
+
+\begin{exer}
+On considère une famille $(\Gamma_{\lambda})_{\lambda \in \Lambda}$ de courbes de $\mathbb{R}^2$, %
+indexée sur une partie $\Lambda$ de $\mathbb{R}$, %
+définie par une famille d'équations $(G(x,y,\lambda)=0)_{\lambda \in \Lambda}$, %
+où $G$ est une fonction de classe $C^{1}$. %
+Dans les cas suivants, trouver une équation différentielle en $x \mapsto y$ -dont aura disparu $\lambda$- %
+dont les solutions ont pour graphes des arcs des termes de $\Gamma_{\lambda}$.\\
+Les termes de $(\Gamma_{\lambda})$ sont:
+\begin{enumerate}
+\item Les hyperboles d'équations respectives: $xy = \lambda$.
+\item Les cercles d'équations respectives: $x^{2} + y^{2} = \lambda$.
+\item Les ellipses de foyers $(-1,0)$ et $(1,0)$ -trouver $G$.
+\item Les courbes d'équations repectives :
+\[(c(x)\lambda + d(x))y = a(x)\lambda + b(x)\]
+où $a$, $b$, $c$, et $d$ sont des applications de classe $C^{1}$ de $\mathbb{R}$ dans lui-même.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Déterminer le rayon de convergence de la série entière $\sum a_n X^n$, où $a_n$ désigne la $n$-ième décimale de $\pi$.
+\end{exer}
+
+\begin{exer}
+Soit $\sum a_n$ une série divergente à termes strictement positifs. %
+On note $(S_n)$ la suite des sommmes partielles de $\sum a_n$, et on suppose que de plus, %
+$\frac{a_n}{S_n}$ tend vers $0$ en $+ \infty$. %
+Calculer les rayons de convergence respectifs de $\sum a_n z^n$ et $\sum S_n z^n$, %
+et étudier la relation qu'entretiennent leurs sommes respectives.
+\end{exer}
+
+\begin{exer}
+Soient $n$ un entier naturel supérieur à $2$, $(A_i)_i$ une famille de $n$ points du plan Euclidien.
+\begin{enumerate}
+\item Donner une condition nécessaire et suffisante pour qu'il existe un $n-$gone %
+dont les milieux des côtés soient les termes de $(A_i)$.
+\item Construire, le cas échéant, ces polygones.
+\end{enumerate}
+%Indication : on discutera selon la parité de $n$.
+\end{exer}
+
+\begin{exer}[Décompostion de Dunford d'un endomorphisme d'espace vectoriel complexe]
+Soit $E$ un espace vectoriel complexe de dimension finie.
+\begin{itemize}
+\item Montrer qu'un endomorphisme $u$ de $E$ se décompose de manière unique d'une forme $d+n$, %
+où $d$ et $n$ sont deuxendomorphismes, respectivement diagonolisable et nilpotent, qui commutent.
+\item Montrer de plus que $d$ et $n$ sont des polynômes en $u$.
+\end{itemize}
+%Indications : on trigonalise $u$. On montre facilement l'existence et la commutativité de la décomposition sur les sous-espaces caractéristiques. Ensuite, on montre que les projections sur les sous-espaces caractéristiques sont des polynômes en $u$ en appliquant la propriété de Bézout à un polynôme bien choisi -il s'agit du polynôme caractéristique de la somme des autres espacees caractéristiques.\\
+%On montre l'unicité en se rappelant qu'un endomorphisme diagonalisable et nilpotent est nul.
+\end{exer}
+
+\begin{exer}
+Soient $n$ un entier naturel non nul, et $\langle | \rangle$ le produit scalaire canonique de $R^n$.
+\begin{enumerate}
+\item Soient $p$ un entier naturel non nul, $(u_i)$ une famille de $p$ vecteurs de $R^n$ vérifiant :
+\[\forall (i,j) \in [[1,p]]^2 , \langle u_i | u_j \rangle < 0\]
+Montrer que toute sous-famille de $p-1$ vecteurs de $(u_i)$ est libre.
+\item Montrer que l'on ne peut trouver plus de $n+1$ vecteurs vérifiant ces conditions.
+\item Montrer que l'on  peut trouver $n+1$ vecteurs vérifiant ces conditions.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soient $I$ un intervalle compact de $\mathbb{R}$, et $(f_n)_{n \in \mathbb{N}})$ %
+une suite d'applications de $I$ dans $\mathbb{R}$ telles que :\\
+Si $(x_n)$ est une suite convergente de $I$, alors $(f_n(x_n))_{n \in \mathbb{N}}$ converge.
+\begin{enumerate}
+\item Montrer que $(f_n)$ converge simplement vers une limite $f$.
+\item Montrer que $(f_n)$ converge uniform\'ement.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Donner un \'equivalent en $+ \infty$ de $x \mapsto \exp(-x^2) \int\limits_0^{x^2} \exp(t^2) dt$.
+\end{exer}
+
+\begin{exer}[$\mathbb{R}^3$ se partitionne en cercles Euclidiens]
+\begin{enumerate}
+\item Donner une partition simple d'un tore plein en cercles Euclidiens.
+\item Comment construit-on simplement un tore deuxième partitionné, %
+dont le cercle radial contient le centre du premier tore, et qui englobe la première figure ? %
+On s'inspirera, dans une large mesure, de la construction précédente.
+\item Construire une partition de $\mathbb{R}^3$ en cercles Euclidiens.
+%Indications : procéder séquentiellement.\\
+%Au cours de l'étape de la question 2), on consruit un objet intermédiaire -nature ?- qui contient les points de l'espace situés à une distance inférieure à $1$ du tore initial, avant de poursuivre.
+\end{enumerate}
+\end{exer}

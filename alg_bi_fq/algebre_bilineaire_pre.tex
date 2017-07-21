@@ -1,0 +1,105 @@
+\section{Alg\`ebre bilin\'eaire, espaces pr\'ehilbertiens}
+
+\begin{exer}
+Soit $E$ l'espace vectoriel des suites r\'eeles de carr\'e sommable, c'est-\`a-dire les suites $(u_n)_{n\in\mathbb{N}}$ telles que $\sum u_n^2$ converge. %
+On pose : \[\langle(u_n)|(v_n)\rangle =\sum\limits_{n=0}^{\infty} u_n v_n\]
+pour toutes les suites $(u_n)$ et $(v_n)$ de $E$.
+\begin{enumerate}
+\item Montrer que l'application d\'efinie pr\'ec\'edemment est un produit scalaire sur $E$. Quelle norme d\'erive de ce roduit scalaire ?
+
+\smallskip
+On note maintenant, pour tout entier naturel $k$, $\delta^{(k)}$ la suite dont le $ki$i\`eme terme vaut $1$, et dont les autres termes sont nuls.
+\item D\'ecrire l'espace vectoriel engendr\'e par la suite $(\delta^{(k)})_k$.
+\item Montrer que cette suite est totale dans $E$.
+\item Montrer qu'il existe une partie d\'enombrable de $E$, qui est dense dans $E$. On dit que $E$ est \textit{s\'eparable}.
+\end{enumerate}
+On note souvent $l^2(\mathbb{R})$ l'espace $E$, muni de la structure pr\'ehilbertienne \'etud\i\'ee ici.
+\end{exer}
+
+%élève2
+\begin{exer}
+Calculer \[\underset{a,b\in\mathbb{R}^2}{\inf}\int\limits_0^1(x\ln x -ax^2-bx)^2 dx\]
+\end{exer}
+
+%élève3
+\begin{exer}
+Montrer qu'une matrice réelle inversible est le produit d'une matrice orthogonale et d'une matrice triangulaire supérieure %
+-décomposition d'Iwasawa.
+\end{exer}
+
+\begin{exer}[Polyn\^omes de Tchebycheff et produit scalaire]
+On d\'efinit, pour deux polyn\^omes $P$ et $Q$ de $\mathbb{R}[X]$ :
+\[\langle P|Q \rangle =\int\limits_{-1}^1 \frac{\tilde{P}(t)\tilde{Q}(t)}{\sqrt{1-t^2}}dt\]
+\begin{enumerate}
+\item Montrer que l'application $\langle |\rangle$ d\'efinie ci-dessus est un produit scalaire sur $\mathbb{R}[X]$.
+\item Soit $n$ un entier naturel. Montrer qu'il existe un unique polyn\^ome $T_n$ tel que :
+\[\forall\theta\in\mathbb{R} , T_n(\cos x)=\cos nx\]
+\item Etablir la relation de r\'ecurrence d'ordre $2$ entre les termes de la suite $(T_n)$.
+\item Montrer que la suite $(T_n)$ est orthogonale pour $\langle |\rangle$ et calculer la norme des termes de $(T_n)$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $E$ un espace pr\'ehilbertien r\'eel. Soient de plus $F$ et $G$ deux sous-espaces vectoriels de $E$.
+\begin{enumerate}
+\item Comparer $(F+G)^{\perp}$ et $F^{\perp}\cap G^{\perp}$.
+\item Comparer $(F\cap G)^{\perp}$ et $F^{\perp}+G^{\perp}$.
+\item Que dire si $E$ est de dimension finie ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $n$ un entier naturel non nul.\\
+D\'eterminer, pour toute matrice $A$ de $\mathcal{M}_n(\mathbb{R})$, la valeur :
+\[\underset{M\in\mathcal{S}_n(\mathbb{R})}{\min}\sum\limits_{(i,j)\in [\![1,n]\!]^2} (A_{i,j}-M_{i,j})^2\]
+\end{exer}
+
+\begin{exer}
+Soit $(E,\langle |\rangle )$ un espace euclidien de dimension sup\'erieure ou \'egale \`a $2$, $a$ et $b$ deux vecteurs unitaires et ind\'ependants de $E$.
+
+On d\'efinit l'endomorphisme lin\'eaire $f$ de $E$ par :\[\forall x \in E, f(x)=\langle a|x\rangle a+\langle b|x \rangle b\]
+\begin{enumerate}
+\item Caract\'eriser $f$ lorsque $a$ et $b$ sont deux vecteurs orthogonaux.
+\item Cas g\'en\'eral : d\'eterminer l'image et les \'el\'ements propres de $f$. $f$ est-il diagonalisable ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $E$ un espace Euclidien. %
+On appelle centre d'un groupe $G$ l'ensemble des éléments de $G$ qui commutent avec tous les éléments de $G$.
+
+D\'eterminer le centre de $O(E)$ et celui de $SO(E)$.
+\end{exer}
+
+\begin{exer}
+Soit $E$ un espace vectoriel réel de dimension finie.
+\begin{enumerate}
+\item Montrer que tout endomorphisme de $E$ admet un sous-espace stable de dimension $1$ ou $2$.
+
+\smallskip
+On suppose maintenant $E$ Euclidien.
+\item Montrer que si $f$ est un endomorphisme de $E$ qui stabilise l'orthogonal de tout sous-espace stable, alors $E$ se décompose en somme directe orthogonale de sous-espaces stables de $f$, de dimension inférieure ou égale à $2$.
+\item En déduire, dans des bases orthogonales bien choisies, les matrices des endomorphismes symétriques ou orthogonaux.% Anien programme : endomorphjismes antisymétriques.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $E$ un espace vectoriel réel de dimension finie.
+
+Montrer que si $G$ est un sous-groupe fini de $GL(E)$, %
+alors tout sous-espace vectoriel de $E$ stable par tous les éléments de $G$ admet un suppl\'ementaire stable par $G$.
+\end{exer}
+
+\begin{exer}
+Soit $E$ un espace préhilbertien réel.
+\begin{enumerate}
+\item Soit $(e_k)$ une suite libre ordonnée, finie ou infinie, de vecteurs de $E$. Définir l'orthonormalisée de Gram-Schmidt de $(e_k)$.
+On suppose maintenant $E$ Euclidien de dimension $n$.
+\item Que dire de l'ensemble $B$ des bases ordonnées de $E$ par rapport à $E^n$ ?
+\item Montrer que l'application de $B$ dans $B$ qui associe, à une base de $E$, son orthonormalisée, est continue.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Trouver tous les couples de sym\'etries orthogonales qui commutent.
+\end{exer}

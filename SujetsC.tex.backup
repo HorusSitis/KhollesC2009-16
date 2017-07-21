@@ -38,7 +38,7 @@ Sauf mention du contraire, les solutions sont personnelles, par ailleurs la prov
 
 \chapter{Alg\g{e}bre bilin\'aire, formes quadratiques, espaces pr\'ehilbertiens}
 \input{alg_bi_fq/algebre_bilineaire_pre.tex}
-\input{alg_bi_fq/ancien_programme.tex}
+\input{ancien_programme.tex}
 
 \chapter{G\'eom\'etrie euclidienne}
 \input{geo_euclidienne/programme_actuel.tex}
@@ -50,27 +50,11 @@ Sauf mention du contraire, les solutions sont personnelles, par ailleurs la prov
 \input{topologie/anc_completude.tex}
 
 \chapter{Suites et s\'eries num\'eriques}
-\input{suites_series_numeriques/suites.tex}
+\input{series_suites_numeriques/suites.tex}
 \input{suites_series_numeriques/series.tex}
 
-\chapter{Analyse sur des fonctions}
-\input{analyse_fonctions/suites_series_fonctions.tex}
-\input{analyse_fonctions/series_entieres.tex}
-\input{analyse_fonctions/fonctions_integrables.tex}
-\input{analyse_fonctions/autres_fonctions.tex}
-\input{analyse_fonctions/anc_series_fourier.tex}
 
-\chapter{Equations diff\'erentielles ordinaires}
-\input{edo/equations_lineaires.tex}
-\input{edo/anc_non_lineaires.tex}
 
-\chapter{Calcul diff\'erentiel et quelques applications}
-\input{calcul_differentiel/calcul_diff_elementaire.tex}
-\input{calcul_differentiel/anc_acc_finis.tex}
-\input{calcul_differentiel/anc_geo_diff.tex}
-
-\chapter{Combinatoire}
-\input{combinatoire/exercices.tex}
 
 \chapter{Probabilit\'es}
 \input{probabilites/formalisme.tex}
@@ -80,8 +64,8 @@ Sauf mention du contraire, les solutions sont personnelles, par ailleurs la prov
 \input{probabilites/beaux.tex}
 \input{probabilites/branchement.tex}
 
-\chapter{Exercices \g{a} retravailler}
-\input{retravailler/enonces.tex}
+
+
 
 
 \end{document}          

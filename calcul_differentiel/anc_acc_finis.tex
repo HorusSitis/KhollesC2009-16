@@ -1,0 +1,66 @@
+\section{Ancien programme : avec les accroissements finis}
+
+\begin{exer}
+Soient $E$ et $F$ deux espaces vectoriels normés, $U$ un ouvert de $E$, %
+et $f$ une application continue de $U$ dans $F$ différentiable sur $U \setminus \{ a \}$, où $a$ est un élément de $U$. %
+On suppose, de plus, que $df$ admet une limite en $a$.\\
+Montrer que $f$ est différentiable en $a$.
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Donner un exemple d'application de $\mathbb{R}^2$ dans lui-même qui soit un difféomorphisme local mais non global.
+\item Montrer que \[\mathbb{R}^2 \rightarrow \mathbb{R}^2 : (x,y) \mapsto (\sin x + \sinh y, \sinh x - \sin y)\]
+est un difféomorphisme de $\mathbb{R}^2$ sur lui-même.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $n$ un entier naturel non nul. On munit $\mathbb{R}^n$ de son produit scalaire canonique. %
+Soit de plus $f$ une application de $\mathbb{R}^n$ dans lui-même, différentiable, telle que :
+\[\exists \alpha \in \mathbb{R}_+ | \forall a \in \mathbb{R}^n , \forall h \in \mathbb{R}^n , \langle df(x)h | h \rangle \geq \alpha \| h \|^2\]
+\begin{enumerate}
+\item Soient $a$ et $b$ deux vecteurs de $\mathbb{R}^n$. Montrer que :
+\[\langle f(b)-f(a) | b-a \rangle \geq \| b-a \|^2\]
+%Indication : Appliquer le théorème des accroissements finis à $[0,1] \rightarrow \mathbb{R}^n : t \mapsto f(tb + (1-t)a)$.\\
+\item Monterer que $f$ est une application fermée.
+%On montrera que : \begin{center}$\forall (a,b) \in (\mathbb{R}^n)^2 , \| f(b)-f(a) \| \geq \| b-a\|$\end{center}
+\item Montrer que $f$ est un difféomorphisme local.
+\item Montrer que $f$ est un difféomorphisme global.
+%Indications : $f$ est injective d'après l'inégalité montrée à la question 2). D'après la question précédente, $f$ est ouverte.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Montrer que le système 
+\[xu^2 + yzv + x^2 z = 3 , xyv^3 + 2zu - u^2 v^2 = 2\]
+permet de définir, au voisinage du point $(1,1,1,1,1)$, $(u,v)$ comme une fonction de $(x,y,z)$.\\
+Quelle est la différentielle de cette fonction en $(1,1,1)$ ?
+\end{exer}
+
+\begin{exer}
+Soient $H_0$ l'espace de Banach des applications continues de $[0,1]$ dans $\mathbb{R}$ %
+muni de la norme de la convergence uniforme $\| \|_{\infty}$, %
+$H_1$ l'espace vectoriel de applications $C^1$ de $[0,1]$ dans $\mathbb{R}$ %
+qui s'annulent en $0$, normé par $\| \|_{\infty} + f \mapsto \| f' \|_{\infty}$ que nous noterons $\| \|_1$.
+\begin{enumerate}
+\item Montrer que $(H_1 , \| \|_1)$ est un espace de Banach.
+\item Soit $\phi H_1 \rightarrow H_0 : f \mapsto f' + ff'$. Montrer que $\phi$ est différentiable et calculer sa différentielle.
+\item Que dire de la différentielle de $\phi$ en $0$ ?
+\item Montrer que si la norme de l'application continue $g$ est suffisament petite, %
+alors l'\'equation différentielle $f' + ff' = g$ admet une solution dans $H_1$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soient $U$ un ouvert de $\mathbb{R}^2$ et $f$ une application de $U$ dans $\mathbb{R}$  %
+qui admet des dérivées partielles bornées.
+\begin{enumerate}
+\item Montrer que si $U$ est convexe, alors $f$ est uniformément continue.
+\item Que devient le résultat si on suppose seulement $U$ connexe ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Montrer qu'une application de classe $C^1$ de $\mathbb{R}^2$ dans $\mathbb{R}$ ne peut pas être injective.
+\end{exer}

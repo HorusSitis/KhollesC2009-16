@@ -1,0 +1,124 @@
+\section{Calcul diff\'erentiel \'el\'ementaire}
+
+\begin{exer}
+Soit : $E = C^0([0,1],\mathbb{R})$\\
+Montrer que les applications suivantes sont différentiables et calculer leurs différentielles :
+\begin{enumerate}
+\item $f_1 : \mathbb{R}^n \rightarrow \mathbb{R}^m : x \mapsto Ax + b$, $A \in M_{m,n}(\mathbb{R})$, $b \in \mathbb{R}^m$
+\item $f_2 : E \rightarrow \mathbb{R} : u \mapsto \int_{0}^1 u(x) dx + 3u(0)$
+\item $f_3 : M_n(\mathbb{R}) \times \mathbb{R}^n \rightarrow \mathbb{R}^n : (A,b) \mapsto Ab$
+\item $f_4 : E^3 \rightarrow E : (u,v,w) \mapsto (x \mapsto (x^2 + 2)u(x)v(x)\int_{0}^1 a(t)w(t)dt + u(0)$, $a \in E$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soient $n$ un entier naturel non nul, et une application diff\'erentiable de $\mathbb{R}^n$ dans $\mathcal{L}(\mathbb{R}^n)$.\\
+Montrer de deux mani\`eres que l'application de $\mathbb{R}^n$ dans $\mathbb{R}^n$ :
+\[x\mapsto f(x)(x)\]
+est diff\'erentiable :
+\begin{itemize}
+\item En évaluant directement $f(x+h)(x+h)$.
+\item En l'exprimant comme composée de deux applications bien choisies.
+\end{itemize}
+\end{exer}
+
+\begin{exer}
+Soit :\[f : \mathbb{R}^2 \rightarrow \mathbb{R}^2 : (x_1,x_2) \mapsto (x_1^2 \sin x_2 , x_1 + \exp x_2)\]
+Montrer que $f$ est de classe $C^1$ et calculer sa différentielle.
+\end{exer}
+
+\begin{exer}
+Soit $U$ un ouvert de $\mathbb{R}^2$, connexe par arcs : %
+on s'int\'eresse aux fonctions $f$, diff\'erentiables, de $U$ dans $\mathbb{R}$, telles que la fonction $\frac{\partial{f}}{\partial{x}}$ est nulle sur $U$.
+\begin{enumerate}
+\item Donner un exemple, pour $U$ et $f$, tel qu'il n'existe pas de fonction $g$ de $\mathbb{R}$ dans $\mathbb{R}$, telle que :
+\[\forall (x,y)\in U , f(x,y)=g(y)\]
+\item Donner une condition simple sur $U$, suffisante, pour qu'une telle fonction $g$ existe pour tout $f$ qui satisfait \`a l'hypoth\`ese de l'exercice.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+R\'esoudre sur $\mathbb{R}^2$, \`a l'aide d'un changement de variable, l'\'equation aux d\'eriv\'ees partielles :
+\[a\frac{\partial{f}}{\partial{x}}+b\frac{\partial{f}}{\partial{y}}=0\]
+o\`u $f$ est une application diff\'erentiable de $\mathbb{R}^2$ dans $\mathbb{R}$, et o\`u l'un au moins de nombres $a$ et $b$ est non nul.
+\end{exer}
+
+\begin{exer}
+Soient $n$ un entier strictement positif, et $f$ une application convexe de $\mathbb{R}^n$ dans $\mathbb{R}$.
+\begin{enumerate}
+\item Montrer que si $f$ admet un minimum local, alors ce minimum est global.
+\item Montrer que si, de plus, $f$ est strictement convexe, alors ce minimum est unique et que : $f(x)\underset{\|x\|\rightarrow +\infty}{\longrightarrow}+\infty$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $K$ un espace topologique compact. On note $E$ l'espace vectoriel des applications continues de $K$ dans $\mathbb{R}$, que l'on munit de $\| \|_{\infty}$. %
+Soient $g$ une application de classe $C^{1}$ de $\mathbb{R}$ dans $\mathbb{R}$, et $\Phi$ l'application :
+\[E \rightarrow E : f \mapsto g \circ f\]
+\begin{enumerate}
+\item Montrer que $\Phi$ est bien définie.
+\item Montrer que $\Phi$ est différentiable et calculer sa différentielle.
+\item Calculer, à l'aide de ce résultat, les différentielles respectives des applications $\phi_1$ et $\phi_2$ définies par :
+\[\forall u \in E , \phi_1 (u) = x \mapsto u^p(x)\]
+\[\forall u \in E , \phi_2 (u) = x \mapsto \exp(u(x)) + 3 \sin u(x_0) , x_0 \in K\]
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Pour chacune des fonctions :
+\[f:(x,y)\mapsto\frac{x^3}{x^2+y^2}\] et \[g:(x,y)\mapsto\frac{x^3y}{x^4+y^2}\]
+d\'efinies sur $\mathbb{R}^2\setminus\{(0,0)\}$, \'etudier :
+
+\smallskip
+\begin{itemize}
+\item La diff\'erentiabilit\'e sur $\mathbb{R}^2\setminus\{(0,0)\}$ ;
+\item La prolongeabilit\'e en $(0,0)$ ;
+\item La diff\'rentiabilit\'e, en $(0,0)$, de l'\'eventuel prolongement.
+\end{itemize}
+\end{exer}
+
+\begin{exer}
+Soit $U$ un ouvert non vide de $\mathbb{R}^2$.
+\begin{enumerate}
+\item Soit $f$ une application de classe $\mathcal{C}^2$ de $U$ dans $\mathbb{R}$. %
+On suppose que $\Delta f\geq f$ et que $f$ admet un maximum dans $U$. %
+Montrer que $f$ est n\'egative sur $U$.
+\item On suppose maintenant que $U$ est born\'e, et on note $\Gamma$ la fronti\`ere de $U$. %
+Soit $g$ une application continue de $\Gamma$ dans $\mathbb{R}$. %
+Montrer qu'il existe au plus une application $h$ de classe $\mathcal{C}^2$ de $U$ dans $\mathbb{R}$ telle que :
+\begin{enumerate}
+\item $h$ admet un prolongement continu commun avec $g$ sur $\overline{U}$
+\item $\Delta h=h$
+\end{enumerate}
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Contre-exemple pour le lemme de Schwarz]
+Soit $f$ l'application de $\mathbb{R}^2$ dans $\mathbb{R}$ d\'efinie par :
+\begin{equation}\forall (x,y)\in\mathbb{R}^2
+\left\{
+\begin{aligned}x=0\vee y=0 &\Rightarrow f(x,y)=0\\
+x\neq 0\wedge y\neq 0 &\Rightarrow f(x,y)=x^2\arctan\frac{y}{x}-y^2\arctan\frac{x}{y}
+\end{aligned}
+\right.
+\end{equation}
+Montrer que $f$ est de classe $\mathcal{C}^1$ sur $\mathbb{R}^2$, %
+que $\frac{\partial^2{f}}{\partial{x}\partial{y}}$ et $\frac{\partial^2{f}}{\partial{y}\partial{x}}$ existent, mais sont diff\'erentes en $(0,0)$.
+\end{exer}
+
+\begin{exer}
+Soient $n$ un entier strictement sup\'erieur \`a $1$, et soit $f$ une application diff\'erentiable de $\mathbb{R}^n$ dans $\mathbb{R}$, telle que :
+\[\frac{|f(x)|}{\| x\|}\underset{\| x\|\rightarrow +\infty}{\longrightarrow}+\infty\]
+Montrer que l'application $\overrightarrow{grad}(f)$ est surjective.
+\end{exer}
+
+\begin{exer}
+Montrer que la s\'erie de terme g\'en\'eral :
+\[U_n:(x,y)\mapsto \frac{1}{n^2}\exp(-n(x^2+y^2))\]
+converge, en un sens que l'on pr\'ecisera, vers une application de classe $\mathcal{C}^1$ de $\mathbb{R}^2$ dans $\mathbb{R}$.
+\end{exer}
+
+\begin{exer}
+On note respectivement $(Ox)_+$ et $(Oy)_+$ les deux demi-axes positifs des abcisses et ordonnées de $\mathbb{R}^2$.\\
+Existe-t-il un arc $C^1$ dont le support soit égal à $(Ox)_+ \bigcup (Oy)_+$ ? Un tel arc peut-il être régulier ?
+\end{exer}

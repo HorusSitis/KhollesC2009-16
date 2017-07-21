@@ -1,0 +1,20 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+
+\input{preambule_sync.tex}
+
+%opening
+\title{Questions de cours et r\'eponses}
+\author{Antoine Moreau}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+\input{sections.tex}
+
+\end{document}

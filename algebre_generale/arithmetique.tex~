@@ -1,0 +1,71 @@
+\subsection{Arithmétique}
+
+\begin{exer}
+Montrer que le $\mathbb{C}$-espace vectoriel $\mathbb{C} (X)$ est de dimension non nénombrable.\\
+On considérera la famille $(\frac{1}{X-\lambda})_{\lambda \in \mathbb{C}}$.
+\end{exer}
+
+Théorème de Mason, théorème de Liouville.
+
+\begin{exer}[Densité naturelle et diviseurs communs]
+Soit $A$ une partie de $\mathbb{N}$.\\
+On dit que $A$ admet une densité naturelle, si et seulement si la suite :
+\[\left(\frac{\sharp A \cap [\![1,n]\!]}{n}\right)_{n \in \mathbb{N}^{\ast}}\]
+converge. On appelle densité de $A$, et note $d(A)$, cette limite lorsqu'elle existe.
+\begin{enumerate}
+\item Soit $\alpha$ un entier strictement positif. Montrer que $\alpha \mathbb{N}$ admet une densité naturelle, %
+calculer cette densité.
+\item Montrer que si $A$ est une partie de $\mathbb{N}$ qui admet une densité naturelle égale à $1$, %
+alors $A$ contient une infinité d'entiers premiers entre eux deux-à-deux.
+%Raisonner par l'absurde.
+%Lemme important : il existe au moins une famille (x_i) d'entiers de $A$, premiers entre eux deux à deux, maximale parmi les familles d'entiers de A qui ont cette propriété.
+\item Déduire de la question précédente un résultat classique en arithmétique.%Il s'agit du théorème d'infinitude de l'ensemble des nombres premiers.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Le théorème d'infinitude de l'ensemble des nombres premiers revisité]
+On définit un ensemble $\tau$ parties de $\mathbb{Z}$ par :
+\[\forall P \in \mathbb{N} , P \in \tau \Leftrightarrow ( \forall m \in P , \exists a \in \mathbb{Z} | m + a \mathbb{Z} \subseteq P)\]
+\begin{enumerate}
+\item Montrer que $\tau$ est une topologie sur $\mathbb{Z}$.
+\item Montrer que, si $a$ est un entier et $b$ un entier naturel non nul, alors : %
+$a \mathbb{Z} + b$ est fermé dans $(\mathbb{Z} , \tau)$.
+\item Montrer que l'ensemble des nombres premiers est infini.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soitn $n$ un entier naturel non nul tel que la suite $(a_k)_k$ des entiers strictement positifs, %
+inférieurs à $n$ et premiers à $n$ soit arithmétique.\\
+Montrer que $n$ est une puissance de deux, ou un nombre premier impair.
+\end{exer}
+
+\begin{exer}
+Démontrer qu'une fonction rationnelle complexe non constante omet au plus une valeur dans $\mathbb{C}$.
+%Indication : On utilisera le théorème de D'Alembert.
+\end{exer}
+
+\begin{exer}
+Soit $k$ un entier naturel supérieur ou égal à $2$.\\
+Montrer que le produit de trois entiers naturels non nuls consécutifs n'est jamais une puissance $k-$ième.
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Montrer qu'il existe une infinité de nombres premiers congrus à $3$ modulo $4$.
+\item Montrer qu'il existe une infinité de nombres premiers congrus à $5$ modulo $6$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $A$ un anneau commutatif.\\
+On dit que $A$ est Noetherien si et seulement si tout idéal de $A$ est engendré map un nombre fini d'éléments de $A$.
+\begin{enumerate}
+\item Montrer que toute suite croissante d'idéaux d'un anneau Noetherien est stationnaire.
+\item Montrer que, si $A$ est un anneau intègre et Noetherien, alors tout élément de $A$ est décomposable en produit de facteurs irréductibles.
+\end{enumerate}
+%Indications : (i) Raisonner par l'absurde.\\
+%(ii) Soit $a$ un élément de $A$ non décomposable. Montrer que $a$ est le produit de deux éléments de $A$ qui ne sont pas des unités, et que l'un d'entre eux est non décomposable.\\
+%(iii) Montrer que si un anneau est principal, alors toute suite croissante de ses idéaux est stationnaire.\\
+%(iv) Considérer la suite des idéaux respectivement engendrés par les termes de la suite d'éléments indécomposables de $A$ définie aux questions (i) et (ii). Conclure.
+\end{exer}

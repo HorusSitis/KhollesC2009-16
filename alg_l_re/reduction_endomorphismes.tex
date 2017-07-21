@@ -1,0 +1,213 @@
+\section{R\'eduction des endomorphismes}
+
+\begin{exer}
+Montrer que $\begin{pmatrix}I_n & I_n\\0&0\end{pmatrix}$ est diagonalisable.
+\end{exer}
+
+\begin{exer}
+Soient $n$ un entier strictement positif, et $A$ et $B$ deux matrices de $\mathcal{M}_n(\mathbb{C})$. %
+Montrer que si $AB=0$, alors $A$ et $B$ sont simultan\'ement diagonalisables.
+\end{exer}
+
+\begin{exer}
+Soit $n$ un entier strictement sup\'erieur \`a $1$ et :\[f:\mathbb{C}_n[X] \rightarrow \mathbb{C}[X] : P\mapsto (X^2-X)P(1)+(X^2+X)P(-1)\]
+Montrer que induit un endomorphisme de $\mathbb{C}_n[X]$ et d\'eterminer son image, son noyau et ses \'el\'ements propres.
+\end{exer}
+
+\begin{exer}
+Soit $\varphi$ l'endomorphisme de $\mathbb{C}[X]$ d\'efini par :\[\forall P\in\mathbb{C}_n[X] , \varphi (P)=(3X+8)P+(X^2-5X)P'-(X^3-X^2)P''\]
+D\'eterminer les \'el\'ements propres de $\varphi$.
+\end{exer}
+
+\begin{exer}
+Soient $n$ un entier naturel non nul, $E$ un espace vectoriel de dimension $n$.
+
+Montrer que si $(u_i)_{i \in [\![1,n]\!]}$ est une famille d'endomorphismes nilpotents de $E$ qui commutent deux-à-deux, %
+alors le produit de cette famille d'endomorphismes est nul.
+\end{exer}
+
+\begin{exer}[Décomposition de Fitting]
+Soient $E$ un espace vectoriel de dimension finie $n$ et $u$ un endomorphisme de $E$.
+\begin{enumerate}
+\item Montrer que les suites $(\textup{Im} u^k)_{k\in\mathbb{N}}$ et $(\ker u^k)_{k\in\mathbb{N}}$ sont strictement monotones puis stationnaires à un m\^eme rang $p$.
+\item Montrer que la suite $(\ker u^k)_k$ "s'essouffle", c'est-à-dire que $(\dim \ker u^{k+1} - \dim \ker u^k)_k$ est décroissante.
+\item Montrer que : $E = \textup{Im} u^p \oplus \ker u^p$.
+
+Ces deux espaces sont respectivement appelés coeur et nilespace de $u$.
+\item Montrer qu'il existe une base de $E$ dans laquelle la matrice de $u$ est diagonale par blocs, avec un bloc nilpotent et un bloc inversible.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Invariance du polynôme minimal par extension du corps de base]
+Soient $M$ une matrice carrée à coefficients dans un corps $\mathbb{K}$, $\mathbb{L}$ une extension de $\mathbb{K}$.\\
+On note $\mu_{M \mathbb{K}}$, respectivement $\mu_{M \mathbb{L}}$, le polynôme minimal de $M$ considérée come à coefficients dans $\mathbb{K}$, respectivement $\mathbb{L}$.
+
+Montrer que ces polynômes sont égaux.
+%Indications : i) Montrer que $\mu_{M \mathbb{L}}$ divise $\mu_{M \mathbb{K}}$. Il suffit alors de montrer que ces polynômes ont même degré.\\
+%ii) Considérer le rang de $(M^q)_{q \in [0, \deg \mu_{M \mathbb{K}}]}$, et démontrer le résultat intermédiaire suivant :\\
+%le rang d'une famille de vecteurs d'une puissancde cartésienne d'un corps est préservé par extenxion de ce corps.
+\end{exer}
+
+\begin{exer}
+Soit : $n \in \mathbb{N}$. %
+Soient $E$ un espace vectoriel de dimension $n$ -sur un corps de caractéristique nulle-, $G$ un sous-groupe fini de $GL(E)$. %
+On note $E^G$ l'ensemble des éléments de $G$ invariants sous l'action de $G$.
+
+Montrer que :\[\dim E^G = \frac{1}{|G|} \sum\limits_{g \in G} Tr g\]
+On considérera le projecteur $\frac{1}{|G|} \sum\limits_{g \in G} g$. 
+\end{exer}
+
+\begin{exer}[Disques de Gershgörin]
+Soit : $n \in \mathbb{N}^{\ast}$
+\begin{enumerate}
+\item Montrer le lemme d'Hadamard :
+\begin{center}
+\fbox{
+\begin{minipage}{11cm}
+Soit $(a_{ij}) \in M_n (\mathbb{C})$. %
+Si :\[\forall i \in [\![1,n]\!] , |a_{ii}| > \sum\limits_{j \neq i} |a_{ij}|\]
+alors $(a_{ij})$ est inversible.
+\end{minipage}
+}
+\end{center}
+\item En déduire une localisation des valeurs propres d'une matrice complexe.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $E$ un espace vectoriel de dimension quelconque, et $u$ et $v$ deusx endomorphismes de $E$ qui commutent.
+
+On suppose que $u$ et $v$ admettent un polyôme annulateur. Montrer qu'il en est de même pour $u+v$.
+\end{exer}
+
+\begin{exer}
+Soit $A$ une matrice complexe.
+
+Montrer que $(A^n)_n$ est bornée si et seulement si %
+toutes ses valeurs propres sont de module inférieur à 1, et pour toute valeur propre $\lambda$ de $A$ de module $1$ :
+\[\ker (A - \lambda I) = \ker (A - \lambda I)^2\]
+\end{exer}
+
+\begin{exer}
+Soient $p$ un entier naturel non nul et $A$ une matrice complexe inversible tels que $A^p$ soit diagonalisable.
+\begin{itemize}
+\item Montrer que $A$ est diagonalisable.
+\item Le résultat subsiste-t-il si $A$ n'est pas supposée inversible ?
+\end{itemize}
+\end{exer}
+
+\begin{exer}
+Soit $A$ une matrice complexe, $n\times n$, de rang $1$ -$n>0$.
+
+Donner une condition n\'ecessaire et suffisante sur $A$ pour que $A$ soit diagonalisable.
+\end{exer}
+
+\begin{exer}
+Soit : \[A=\begin{pmatrix}0&1&0\\1&0&1\\0&1&0\end{pmatrix}\]
+Calculer $\exp A$.
+\end{exer}
+
+\begin{exer}
+Soient $n$ un entier naturel non nul, et $G$ un sous goupe de $GL_n (\mathbb{C})$ vérifiant :
+\[\forall g \in G , g^2 = I_n\]
+\begin{enumerate}
+\item Montrer que $G$ est abélien.
+\item Montrer que les éléments de $G$ sont simultanément diagonalisables.
+\item Montrer que $G$ est fini, et majorer son ordre.
+\item Soit $m$ un entier naturel. %
+Montrer que $GL_n (\mathbb{C})$ est isomorphe à $GL_n (\mathbb{C})$ si et seulement si $n = m$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soient $E$ un espace vectoriel de dimension finie, $u$ un endomorphisme de $E$. %
+On note $\mu_u$ le polynôme minimal de $u$, et on appelle polynôme minimal ponctuel de $u$ en un vecteur $x$ %
+le polynôme unitaire $\mu_u^x$ qui engendre l'idéal :\[\{ P \in \mathbb{K}[X] / P(u)(x) = 0\}\]
+On munit $E$ d'une base $(e_i)$.
+\begin{enumerate}
+\item Montrer que les termes de $\mu_u^x$ divisent $\mu_u$.
+\item Montrer que $\mu_u$ est le ppcm des termes de $(\mu_u^{e_i})_i$.
+\item Soit $(x,y) \in E^2$. montrer que si $\mu_u^x$ et $\mu_u^y$ sont premiers entre eux, %
+alors il existe un élément de $E$ dont le polynôme minimal ponctuel est $\mu_u^x\mu_u^y$.
+\item Montrer qu'il existe un élément de $E$ dont le polynôme minimal ponctuel est $\mu_u$.
+\end{enumerate}
+\end{exer}
+
+\subsection{Endomorphismes cycliques}
+
+\begin{exer}
+Dans tout cet exercice, $E$ est un $\mathbb{K}-$espace vectoriel de dimension finie, et $u$ un endomorphisme de $E$.
+\begin{enumerate}
+\item On appelle, pour un \'el\'ement $x$ quelconque de $E$, \textit{espace cyclique} de $u$ engendr\'e par $x$ le sous-espace $E_x$ de $E$ d\'efini par : $E_x=Vect (u^k(x))_{k\in\mathbb{N}}$.
+\begin{enumerate}
+\item Montrer que $E_x$ est le plus petit sous-espace de $E$ stable par $u$ et contenant $x$.
+\item Montrer qu'il existe un polyn\^ome $\mu_u^x$, \`a coefficients dans $\mathbb{K}$, %
+unique \`a une constance multiplicative pr\`es, qui divise tout polyn\^ome $P$ de $\mathbb{K}[X]$ tel que $P(u)(x)=0$.
+\item Que dire du degr\'e de $\mu_u^x$ ?
+\item Comparer $\mu_u^x$ et le polyn\^ome annulateur global de $u$, $\mu_u$.
+\item En exprimant la matrice de la restriction $v$ de $u$ \`a $E_x$ dans une base bien choisie, %
+montrer que : $\mu_u^x=\chi_v$.
+\item Comparer $\mu_u^x$ et $\chi_u$, sans utiliser le th\'eo\`eme de Cayley-Hamilton.
+\end{enumerate}
+\item A l'aide des r\'esultats qui pr\'ec\`edent, d\'emontrer le th\'eor\`eme de Cayley-Hamilton.
+
+\smallskip
+Un endomorphisme $u$ de $E$ tel que $E_x=E$ pour un certain $x$ est dit \textit{cyclique}.
+\item D\'emontrer que si $u$ est un endomorphisme cyclique, alors $\mu_u$ et $\chi_u$ sont \'egaux.
+\item On suppose maintenant que le polyn\^ome $\mu_u$ est irr\'eductible.
+\begin{enumerate}
+%Montrer que si $x$ est un vecteur de $E$ et $F$ un sous-espace de $E$ stable par $u$, alors $F$ inclut $E_x$ ou l'intersection de ces deux espaces est triviale.
+\item Montrer que les espaces cycliques de $u$ sont des sous-espaces stables minimaux, %
+c'est-\`a-dire qu'ils n'incluent pas de sous-espace vectoriel strict stable par $u$.
+\item Montrer que $u$ se d\'ecompose comme somme d'endomorphismes cycliques, %
+c'est-\`a-dire qu'il existe une famille $(x_k)$ finie de vecteurs de $E$ telle que :
+\[E=\bigoplus\limits_k E_{x_k}\]
+\end{enumerate}
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Lemme chinois et endomorphismes cycliques]
+Montrer que la somme directe d'une famille d'endomorphismes cycliques deux à deux étrangers %
+-du point de vue de leur polynôme caractéristique- est cyclique.
+\end{exer}
+
+\subsection{Semi-simplicité}
+
+\begin{exer}
+On dit que $u$ est semi-simple si et seulement si tout sous-espace de $E$ stable par $u$ admet un supplémentaire dans $E$, stable par $u$.
+
+Montrer que $u$ est semi-simple si et seulement si son polynôme minimal n'admet que des facteurs irréductibles avec une multiplicité $1$.
+\end{exer}
+
+\begin{exer}[Endomorphismes semi-simples]
+On appelle endomorphisme semi-simple d'un espace vectoriel $E$ un endomorphisme $u$ tel que, %
+si $F$ est un sous-espace de $E$ stable par $u$, alors $F$ admet un supplémentaire stable par $u$. %
+On définit de même les matrices semi-simples.
+\begin{enumerate}
+\item Que dire d'un endomorphisme semi-simple et nilpotent ?
+\item Montrer que le polynôme minimal d'un endomorphisme semi-simple d'un espace vectoriel de dimension finie %
+sur un corps quelconque, n'admet pas de facteur multiple.
+
+Soit $M$ une matrice $(n,n)$ à coefficients dans un corps $\mathbb{K}$, semi-simple. %
+On note $\mathbb{K}_{alg}$ la clôture algébrique de $\mathbb{K}$.
+\item Montrer que si $M$ est considérée comme étant à coefficients dans $\mathbb{K}_{alg}$, alors $M$ est diagonalisable.
+
+Soient $\mathbb{K}$ un corps commutatif, $\mathbb{L}$ un sur-corps commutatif de $\mathbb{K}$.
+\item Montrer qu'une matrice $M$ -on considère les endomorphismes canoniquement associés- à coefficients dans $\mathbb{K}$, %
+semi-simple lorsqu'elle est considérée à coefficients dans $\mathbb{L}$, est encore semi-simple.
+\item En déduire qu'un endomorphisme d'espace vectoriel de dimension finie, annulé par un polynôme n'admettant pas de facteur multiple, est semi-simple.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Montrer que si $E$ est un espace vectoriel de dimension finie, %
+et $(u_i)_i$ une famille d'endomorphismes diagonalisables de $E$ commutant deux à deux, %
+alors ces endomorphismes sont diagonalisables dans une même base.
+\end{exer}
+
+\subsection{Simplicité}
+
+\begin{exer}
+On dit que $u$ est simple si et seulement si les seuls sous-espaces de $E$ stables par $u$ sont $E$ et $\{ 0\}$.
+Montrer que $u$ est simple si et seulement si $\chi_u$ est irréductible.
+\end{exer}

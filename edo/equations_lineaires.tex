@@ -1,0 +1,147 @@
+\section{Equations diff\'erentielles lin\'eaires}
+
+\begin{exer}
+Donner la solution g\'en\'erale du syst\`eme :
+\begin{equation}
+  \left\{
+      \begin{aligned}
+        x'&=x+8y+e^t \\
+        y'&=2x+y+e^{-3t} \\
+      \end{aligned}
+    \right.
+\end{equation}
+\end{exer}
+
+\begin{exer}
+R\'esoudre le syst\`eme diff\'erentiel suivant :
+$\left\{
+\begin{array}{l}
+  x'=y+z\\
+  y'=x\\
+  z'=x+y+z
+\end{array}
+\right.$
+\end{exer}
+
+\begin{exer}
+R\'esoudre, sur $\mathbb{R}$, le syst\`eme suivant :
+\begin{equation}
+\left\{
+\begin{aligned}
+x'&=x+6y\\
+y'&=-3x-5y\\
+z'&=-3x-6y-5z\\
+\end{aligned}
+\right.
+\end{equation}
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Déterminer les sous-espaces de dimension finie de $C^{\infty}(\mathbb{R},\mathbb{C})$, stables par la dérivation.
+\item Cas réel ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soient $f$ une fonction de $\mathbb{R}$ dans $\mathbb{R}$, continue et born\'ee et $a$ un r\'eel strictement positif.\\
+Montrer que l'\'equation diff\'erentielle $y''-a^2y=f$ adment une unique solution born\'ee sur $\mathbb{R}$.
+\end{exer}
+
+\begin{exer}
+Soit $p$ une application de $\mathbb{R}$ dans $\mathbb{R}_+$.\\
+Montrer que toutes les solutions de l'équation différentielle $y'' + py = 0$ s'annulent dans $\mathbb{R}$, sauf si $p = 0$.
+\end{exer}
+
+\begin{exer}
+Soit $y$ une application de classe $C^2$ de $\mathbb{R}$ dans $\mathbb{R}$, telle que : $y(0) = 1$, $y'(0) = 0$; solution de
+\[y'' = -X|y|\]
+Montrer que $y$ tend vers $- \infty$ en $+ \infty$.
+%Indication : démontrer et utiliser la concavité de $y$ sur $\mathbb{R}_+$.
+\end{exer}
+
+\begin{exer}
+Trouver le solution g\'en\'erale de l'\'equation diff\'erentielle :
+\[(1-x^2)y''-xy'+y=0\]
+\end{exer}
+
+\begin{exer}
+Soit $E$ l'espace vectoriel : $\mathcal{C}^0([0,1],\mathbb{R}$.\\
+On d\'efinit sur $E$ l'op\'erateur \[T:E\rightarrow [0,1]^{\mathbb{R}}:f\mapsto x\mapsto \int\limits_0^x \int\limits_t^1 f(u)dudt\]
+Montrer que $T$ induit un endomorphisme de $E$, et pr\'eciser ses \'el\'ements propres.
+\end{exer}
+
+\begin{exer}[Un th\'eor\`eme de Floquet]
+Soient $n$ un entier naturel non nul, $T$ un r\'eel strictement positif %
+et $t\mapsto A(t)$ une application continue et $T-$p\'eriodique de $\mathbb{R}$ dans $\mathcal{M}_n(\mathbb{C})$.\\
+On se propose d'\'etudier l'\'equation  diff\'erentielle :
+\begin{equation}
+%(\ast)
+Y'(t)=A(t)Y(t)
+\label{ex1}
+\end{equation}
+\begin{enumerate}
+\item Montrer qu'il existe une solution $V$ du syst\`eme, et un complexe $\lambda$, tels que :
+\[\forall t \in \mathbb{R} , V(t+T)=\lambda V(t)\]
+
+\smallskip
+Soit maintenant $(V_k)$ un syst\`eme fondamental de solutions de~\eqref{ex1}. %
+On note, pour tout r\'eel $t$, $M(t)$ la matrice dont les vecteurs colonne sont les $V_k(t)$.
+\item Montrer qu'il existe une matrice $C$ de $\mathcal{GL}_n(\mathbb{C}$ telle que :\[\forall t \in \mathbb{R} , M(t+T)=M(t)C\]
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $n$ un entier naturel non nul.\\
+On pose : $(U,V)\in\mathcal{M}_{n,1}(\mathbb{R})$ et $\lambda\in\mathbb{R}$.\\
+On se propose, dans cet exercice, d'\'etudier l'\'equation diff\'erentielle :
+\begin{equation}
+X'=AX
+\label{ex2}
+\end{equation}
+o\`u :$A=\lambda I_n+B$ et $B=U{}^TV$.
+\begin{enumerate}
+\item Exprimer, pour tout r\'eel $t$, $X(t)$ en fonction de $X(0)$, $t$, $\lambda$, $B$ et $Tr B$.
+\item D\'eterminer les sous-espaces vectoriels $E$ de $\mathbb{R}^n$ tels que :
+
+\smallskip
+$X(0)\in E$ implique $X(t)\in E$ pour tout $t$.
+\item Donner une condition n\'ecessaire et suffisante pour que toutes les solutions de l'\'equation~\eqref{ex2} admettent une limite finie en $+\infty$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Deux problèmes cousins : équations linéaires perturbées]
+On associe, à un polynôme $\sum\limits_{k=0}^n a_k X^k$ que nous noterons également $P$, les deux équations, dites linéaires perturbées, suivantes :
+\[(D) : \sum\limits_{k=0}^n a_k x^{(k)} = y\] où $x$ et $y$ sont des applications de classe $C^{\infty}$ de $\mathbb{R}$ dans $\mathbb{C}$ ;
+\[(R) : \forall m \in \mathbb{N} , \sum\limits_{k=0}^n a_k x_{m+k} = y_m\] où $(x_m)$ et $(y_m)$ sont deux suites complexes.\\
+On se propose, dans les deux cas, de donner une condition nécessaire et suffisante à ce que la convergence vers $0$ de $y$ à l'infini implique celle de $x$.
+\begin{enumerate}
+\item Cas différentiel : \`a l'aide de solutions particuli\`eres de l'équation linéaire associée, donner une condition nécessaire $(CD)$ sur les racines de $P$ pour que la propriété de convergence considérée soit vérifiée.
+\item D\'eterminer, de la m\^eme mani\`ere, une condition nécessaire $(CR)$ à la propriété de convergence pour $(R)$.
+
+\smallskip
+On se propose maintenant de montrer que $(CD)$ et $(CR)$ sont suffisantes aux ropriétés de convergence des solutions des équations perturbées $(D)$ et $(R)$.\\
+\item Montrer que pour chacun des deux problèmes, il suffit de résoudre le cas du degré $1$.
+\item Résoudre le problème dans le cas de $(D)$.
+\item Résoudre le problème dans le cas de $(R)$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Une démonstration du comte Napoléon Daru]% : équations différentielles et lemme de Schwarz]
+On considère, dans tout cet exercice, l'équation différentielle scalaire : \[\sum\limits_{k=0}^n a_k y^{(k)} = 0\]
+où $\sum\limits_{k=0}^n a_k X^k$ est un polynôme réel scindé, unitaire de degré $n$, que nous noterons $P$.
+\begin{enumerate}
+\item Calculer la dimension de l'espace vectoriel des solutions de cette équation différentielle.
+
+\smallskip
+On cherche maintenant à déterminer une base de cet espace vectoriel, à l'aide de la méthode de Daru. On s'int\'eresse pour cela à la famille de fonctions $(x \mapsto \exp mx)_{m \in \mathbb{R}}$.
+\item Calculer l'image d'une telle fonction par l'opérateur différentiel $P(\frac{d}{dx})$.
+
+\smallskip
+On consid\`ere l'application, de classe $C^{\infty}$ sur $\mathbb{R}^2$, $(m,x) \mapsto \exp mx$.
+\item Exprimer les d\'eriv\'ees successives de cette application par rapport à $m$.\\
+\item Que dire des opérateurs différentiels de $\mathcal{C}^{\infty}(\mathbb{R}^2,\mathbb{R})$, $\frac{\partial}{\partial m}$ et $P(\frac{\partial}{\partial x})$ ? En déduire les images par $P(\frac{d}{dx})$ des applications $x \mapsto x^k \exp(mx)$ - $m \in \mathbb{R}$, $k \in \mathbb{N}$.
+%Indications : Utiliser le lemme de Schwarz, puis la formule de Leibniz.\\
+\item D\'eduire de ce qui pr\'ec\`ede les solutions de l'\'equation diff\'erentielle consid\'er\'ee.
+\end{enumerate}
+\end{exer}

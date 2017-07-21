@@ -1,0 +1,117 @@
+\section{S\'eries num\'eriques}
+
+\begin{exer}
+D\'eterminer la nature des s\'eries dont le terme g\'en\'eral est donn\'e ci-dessous :
+\begin{itemize}
+\item $n^{\frac{1}{n}}-1$
+\item $\frac{(-1)^n}{\sqrt[n]{n!}}$
+\end{itemize}
+\end{exer}
+
+\begin{exer}
+Montrer que les s\'eries dont le terme g\'en\'eral est donn\'e ci-dessous sont convergentes, et calculer leurs sommes.
+\begin{enumerate}
+\item $\ln(1-\frac{1}{n^2})$
+\item $\frac{1}{n}$ lorsque $n$ est un carr\'e; $\frac{1}{n^2}$ sinon.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $(a_n)_{n \in \mathbb{N}}$ une suite de r\'eels positifs tels que : $\sum a_n$ converge.
+\begin{enumerate}
+\item Soit $\alpha$ un r\'eel strictement sup\'erieur \`a $\frac{1}{2}$. %
+Montrer que la s\'erie $\sum \frac{\sqrt{a_n}}{n^{\alpha}}$ converge.
+\item Que dire du cas o\`u : $\alpha = \frac{1}{2}$ ?
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $(u_n)$ une suite décroissante de réels positifs qui tend vers $0$.
+\begin{enumerate}
+\item Montrer que les séries $\sum u_n$ et $\sum n(u_n - u_{n+1})$ sont de même nature.
+\item Montrer de plus que lorsque ces séries convergent, elles ont même somme.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Donner la nature, lorsque cela est possible, de la série de terme général $n! \prod_{k=1}^n \sin(\frac{x}{k})$, %
+où $x$ est un réel quelconque.
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Montrer que si une série $\sum x_n$ d'éléments d'un espace de Banach est absolument convergente, %
+alors elle est commutativement convergente, c'est-à-dire :
+
+%\begin{center}
+Pour toute permutation $\sigma$ de $\mathbb{N}$, la série $\sum x_{\sigma(n)}$ est convergente, %
+de somme $\sum\limits_{n=0}^{\infty} x_n$.
+%\end{center}
+
+\medskip
+On se propose maintenant de démontrer la réciproque de ce résultat dans le cas des séries réelles. %
+Soit $(u_n)$ une suite réelle telle que la série de terme général $u_n$ soit semi-convergente.
+\item Démontrer le théorème de réarrangement de Riemann : Pour tout réel $\alpha$, %
+il existe une permutation $\sigma$ de $\mathbb{N}$ telle que la série %
+de terme général $u_{\sigma(n)}$ soit convergente de somme $\alpha$.
+%Indication : Soient $E_+$ et $E_-$ les ensembles définis par : $E_+ = \{ n \in \mathbb{N} \arrowvert u_n \geq 0 \}$, $E_- = \mathbb{N} \backslash E_+$. Il existe deux bijections croissantes $\varphi$ et $\psi$ de $\mathbb{N}$, respectivement sur $E_+$ et $E_-$. Montrer que les suites $(\Sigma_{k=0}^n u_{\varphi (k)})_{n \in \mathbb{N}}$ et $(\Sigma_{k=0}^n u_{\psi (k)})_{n \in \mathbb{N}}$ tendent respectivement vers $+ \infty$ et $- \infty$.\\
+\item Montrer qu'il existe une permutation $\sigma$ de $\mathbb{N}$ telle que %
+la suite des sommes partielles de la série de terme général $u_{\sigma(n)}$ n'admette pas de limite %
+dans $\mathbb{R} \bigcup \{ +\infty ,-\infty \}$.
+%Indication : Ici encore, on utilise les suites $(u_{\varphi(n)})$ et $(u_{\psi(n)})$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Soit $(q_n)$ une suite croissante d'entiers strictement supérieurs à $1$. %
+Montrer que la série de terme général $\frac{1}{\Pi_{j=0}^n q_j}$ converge vers un élément de $]0,1]$, %
+que nous noterons $\varphi ((q_n)_{n \in \mathbb{N}})$.
+\item A titre d'exemple, soit $k$ un entier naturel non nul. On constate que $1/k$ est élément de $]0,1]$. %
+Décomposer ce nombre en somme d'une telle série.
+\item Montrer que l'application $\varphi$ de l'ensemble $S$ des suites croissantes de %
+$\mathbb{N} \backslash \{0,1\}$ dans $]0,1]$ définie à la question 1. est bijective.
+
+L'antécédent par $\varphi$ d'un élément $x$ de $]0,1]$ est appelé \textit{développement de $x$ en série de Engel}.
+\item\label{rateng} A quelle condition sur $(q_n)$ le réel $\varphi ((q_n))$ est-il rationel ?
+
+On appelle nombre Egyptien l'inverse d'un entier naturel non nul.
+\item Montrer que tout rationel de $]0,1]$ s'écrit d'une unique manière comme somme d'une suite finie de nombres Egyptiens distincts.
+\item Déduire de la question \ref{rateng} l'irrationalité d'un réel bien connu en analyse.
+%Indication : Il s'agit de $e$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Convergence et densit\'e pour une suite d'entiers naturels]
+Soit $A$ un ensemble d'entiers naturels. On dit que $A$ admet une densité naturelle sus $\mathbb{N}$ si et seulement si :
+\[\left(\frac{\sharp A \cap [\![1,n]\!]}{n}\right)_n\text{ admet une limite en $+ \infty$.}\]
+Lorsque cette limite existe, nous l'appelons densité de $A$, et la notons $d(A)$.
+
+Soit maintenant $(a_n)_n$ une suite strictement croissante d'entiers natuels non nuls. %
+Montrer que si la série $\sum \frac{1}{a_k}$ converge, %
+alors l'ensemble des termes de $(a_k)$ admet, dans $\mathbb{N}$, une densit\'e naturelle égale à $0$.
+\end{exer}
+
+\begin{exer}[Crit\g{e}re de condensation de Cauchy]
+\begin{enumerate}
+\item Soit $(u_n)_n$ une suite de réels décroisssante qui tend vers $0$ en $+ \infty$. %
+Montrer que, pour tout entier $p$ strictement supérieur à $1$, %
+la série $\sum u_n$ converge si et seulement si la série $\sum p^n u_{p^n}$ converge.
+\item Soit $(u_n)_n$ une suite de réels positifs telle que $\sum u_n$ diverge. %
+Montrer que $\sum min(u_n,1/n)$ diverge.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Déterminer la nature de la série des entiers naturels qui s'écrivent, en base $10$, sans le chiffre $9$.
+\end{exer}
+
+\begin{exer}
+Soient $(a_n)$ une suite d'éléments d'un espace de Banach telle que %
+$\left(\sum\limits_{k=0}^n a_k\right)_{n \in \mathbb{N}}$ soit bornée, %
+et $(\epsilon_n)$ une suite réelle décroissante qui converge vers $0$.
+\begin{enumerate}
+\item Montrer que la série de terme général $a_n \epsilon_n$ converge. Cette règle est appelée critère de convergence d'Abel.
+\item Démontrer, en utilisant la question précédente, le critère spécial des séries alternées.
+\end{enumerate}
+\end{exer}

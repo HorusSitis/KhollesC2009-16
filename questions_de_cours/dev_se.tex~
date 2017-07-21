@@ -1,0 +1,34 @@
+\section{Formules de trigonom\'etrie}
+
+\begin{ques}
+Donner les formule de lin\'earisation pour $\cos^2$ et $\sin^2$.
+\end{ques}
+
+\begin{ques}
+Soit : $x \in \mathbb{R}$. Exprimer $\sin 3x$ et $\cos 3x$ comme des polyn\^omes, respectivement en $\sin x$ et $\cos x$.
+\end{ques}
+
+\begin{ques}
+Soient $p$ et $q$ deux réels. Exprimer $\tan p$ et $\tan q$ en fonction de $\cos$ et $\sin$ -en $p + q$, $p$, $q$.
+%
+\end{ques}
+
+\begin{ques}
+Soit $a$ un réel. Exprimer $\sin 2a$ en fonction de $\tan a$.
+\end{ques}
+
+\begin{ques}
+Rappeler les formules de factorisation des $\cos p \pm \cos q$ et $\sin p \pm \sin q$, lorsque $p$ et $q$ sont deux r\'eels quelconques.
+\end{ques}
+
+\begin{ques}
+Donner l'expression du cosinus et du sinus d'un angle de $]-\pi , \pi[$ en fonction de la tangente de l'angle moitié.
+\end{ques}
+
+\begin{ques}
+Calculer : $\sum\limits_{k=0}^{n} \cos(kx)$, pour un entier naturel $n$.
+\end{ques}
+
+\begin{ques}[Ancien programme]
+Ecrire les formules d'addition pour $\tan$ et $\tanh$.
+\end{ques}

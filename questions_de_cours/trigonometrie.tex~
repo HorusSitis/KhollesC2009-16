@@ -1,0 +1,83 @@
+\section{Calcul de primitives} %Il faut aussi une correction syst\'ematique pour cette sous-section.
+
+\begin{ques}
+Donner une primitive de $x \mapsto x \tan^2 x$ sur un intervalle sur lequel elle est définie.
+\end{ques}
+
+\begin{ques}
+Donner une primitive de $x\mapsto \sqrt{1+x^2}$ sur $\mathbb{R}$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive, sur $\mathbb{R}_+^{\ast}$, de la fonction $x\mapsto \frac{(\ln x)^n}{x}$ -$n$ est un entier diff\'erent de $-1$.
+\end{ques}
+
+\begin{ques}
+Soit $a$ un r\'eel strictement positif.
+
+Donner une primitive de la fonction $x\mapsto\frac{x^2}{\sqrt{a^2-x^2}}$ sur l'intervalle $]-a,a[$.
+\end{ques}
+
+\begin{ques}
+Soient $a$ un réel non nul, et $n$ un entier naturel supérieur ou égal à $2$. Donner une primitive sur $\mathbb{R}$ de $x \mapsto \frac{x}{(a^2 + x^2)^n}$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive, sur $\mathbb{R}^{\ast}$ , de $x \mapsto \frac{x}{1+\sqrt{x}}$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive sur $\mathbb{R}$ de la fonction $x \mapsto x \tanh^2 x$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive sur $]-\pi ,\pi[$ de la fonction $x \mapsto \cos(x) \ln (1+\cos(x))$.
+\end{ques}
+
+\begin{ques}
+Soient $a$ et $b$ deux réels, $b$ étant non nul. Donner des primitives de $x \mapsto \frac{\sin x}{a + b \cos x}$ sur les intervalles sur lesquels elle est définie.
+\end{ques}
+
+\begin{ques}
+Donner une primitive de $x \mapsto \frac{\arcsin x}{\sqrt{1 - x^2}}$ sur son intervalle de d\'efinition.
+\end{ques}
+
+\begin{ques}
+Donner une primitive de $x \mapsto \frac{x}{\sqrt{x^4 - 1}}$ sur $]1, + \infty[$.
+\end{ques}
+
+\begin{ques}
+Donner des primitives de $x \mapsto \cos(ax) \cos(bx)$ et $x \mapsto \sin(ax) \sin(bx)$ sur $\mathbb{R}$, lorsque $a$ et $b$ sont deux réels quelconques.
+\end{ques}
+
+\begin{ques}
+Doner une primitive sur $\mathbb{R}$ de la fonction $x \mapsto x \sin(\alpha x)$ lorsque $\alpha$ est un réel non nul.
+\end{ques}
+
+\begin{ques}
+Donner une primitive sur $\mathbb{R}$ de $x \mapsto \frac{x}{\cosh^2 x}$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive de la fonction $\arg\tanh$ sur l'intervalle $]-1,1[$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive de la fonction $\arg\cosh$ sur $]1,+\infty[$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive de la fonction $\arg\sinh$ sur $\mathbb{R}$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive, sur un intervalle que l'on pr\'ecisera, de la fonction $\frac{1}{\cos}$.
+\end{ques}
+
+\begin{ques}
+Donner une primitive de $x\mapsto \frac{1}{\ln x}$ sur un intervalle sur lequel cette fonction est définie.
+\end{ques}
+
+\begin{ques}
+Donner une primitive de $x\mapsto \frac{\cos x}{x}$ sur $\mathbb{R}_+^{\ast}$.
+\end{ques}
