@@ -1,0 +1,62 @@
+% \section{S\'eries de Fourier}
+
+\begin{exer}[Inégalité de Wirtinger]
+Montrer que, si $y$ est une application $2 \pi$-périodique $C^1$ de $\mathbb{R}$ dans lui-même, alors :
+\[\int_{0}^{2 \pi} y^2 \leq \int_{0}^{2 \pi} y'^2\]
+Etudier le cas d'égalité.
+\end{exer}
+
+\begin{exer}
+Soit $f$ une fonction continue, $2\pi-$périodique dont les coefficients de Fourier %
+de degré inférieur ou égal à un entier positif $n$ sont nuls.\\
+Montrer que $f$ admet au moins $2n$ zéros sur une période.
+\end{exer}
+
+\begin{exer}
+Soit $P$ un polynôme trigonométrique de degré inférieur ou égal à $n$.\\
+Démontrer qu'il existe un réel positif $c$, que l'on calculera explicitement, ne dépendant que de $n$, telle que :
+\[\Arrowvert P' \Arrowvert \leq c \Arrowvert P \Arrowvert\]
+On pourra, pour tout élément la fonction $I_n$ définie sur $[0,2\pi]$ par :
+\[\forall x \in [0,2\pi], I_n(x) = \int_0^{2\pi} P(x-y)F_n(y) dy\]
+\end{exer}
+
+\begin{exer}
+Soit $f$ une application de classe $C^{\infty}$ de $\mathbb{R}$ dans lui-même, à décroissance rapide ainsi que ses dérivées, c'est-à-dire 
+\[\forall (m,n) \in \mathbb{N}^2 , \lim\limits_{\substack{+ \infty \\ - \infty}} x^m f^{(n)}(x) = 0\]
+On considère la fonction $\phi$ définie sur $\mathbb{R}$ par :\[\forall x \in \mathbb{R} , \phi (x) = \sum\limits_{n \in \mathbb{Z}} f(x+2k\pi)\]
+\begin{enumerate}
+\item Montrer que cette somme est bien définie -en quels sens ? Que dire de la régularité de $\phi$ ?
+%Indication : On pourra étudier ces questions de convergence sur les compacts de $\mathbb{R}$.\\
+\item Montrer que $\phi$ se développe en série de Fourier de la manière suivante
+\[\forall x \in \mathbb{R} , \phi (x) = \sum\limits_{n \in \mathbb{Z}} c_n(f) e^{inx}\]
+où $\forall n \in \mathbb{Z} , c_n(f) = \int\limits_{\mathbb{R}} f(t) e^{-int} dt$
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Développer en série de Fourier la fonction : $x \mapsto \ln (2 + \cos x)$.\\
+On pourra, en premier lieu, développer la dérivée en série de Fourier.
+\end{exer}
+
+\begin{exer}
+Soit $E$ l'espace des fonctions complexes, continues et $2\pi-$périodiques sur $\mathbb{R}$, qui sont limites uniformes de leur série de Fourier.\\
+On définit sur $E$ la norme $\| \|_E$ par :
+\[\forall f \in E \|f\| _E = \sup\limits_{n \in \mathbb{N}} \| S_n(f) \|_{\infty}\]
+Montrer que $(E , \| \|_E)$ est un espace de Banach.
+\end{exer}
+
+\begin{exer}[Equation à retard]
+Soit $\lambda$ un réel. On considère l'équation en $f$ suivante, dite équation à retard :\[\forall t \in \mathbb{R} , f'(t) = f(t + \lambda)\]
+\begin{enumerate}
+\item Montrer que si $f$ est solution, alors $f$ et $f'$ sont développables en série de Fourier.
+\item Avec la même notation, montrer que :\[\forall n \in \mathbb{Z} , (in - e^{in \lambda})c_n(f) = 0\]
+En déduire toutes les solutions possibles.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Lemme de Riemann-Lebesgue généralisé]
+Soit : $(a,b) \in \mathbb{R}$ , $a<b$.\\
+Montrer que si $f$ est une fonction réelle continue définie sur $[a,b]$, %
+$g$ une fonction intégrable au sens de Riemann, $2\pi -$périodique et positive, alors :
+\[\lim\limits_{n \rightarrow \infty} \int\limits_a^b f(t)g(nt) dt = \frac{1}{2\pi} \int\limits_a^b f(t) dt \int\limits_0^{2\pi} g(t) dt\]
+\end{exer}

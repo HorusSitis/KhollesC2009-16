@@ -1,0 +1,63 @@
+% \section{EDO r\'esolues : cas g\'en\'eral}
+
+\begin{exer}[Flot de vecteur associé à une équation différentielle résolue]% et théorème de Cauchy-Lipschitz]
+Soit $E$ un espace de Banach, et $U$ un ouvert de $E \times \mathbb{R}$. %
+On considère une fonction $f$ de $U$ dans $E$, autrement dit un champ de vecteurs sur $U$, localement Lipschitzienne en $x$, par exemple $C^1$. %
+On s'intéresse à l'équation différentielle en $x$ : \[x' = f(x,t)\]
+On note, pour tout couple $(x,s)$ de $U$ et tout temps $t$ suffisamment proche de $s$, $\varphi(t;s,x)$ la valeur en $t$ de la solution globale de $(Eq)$ associée à la condition initiale $(x,s)$ -pourquoi existe-t-elle ?\\
+\ligneinter
+\begin{enumerate}
+\item Montrer que, pour tous $(x,s_1)$, $s_2$ et $t$ tels que cette exession est définie : \[\varphi(t;s_2,\varphi(s_2;s_1,x)) = \varphi(t;s_1,x)\]
+\begin{center}
+\begin{minipage}{16cm}
+\textit{
+On s'intéresse au cas autonome. %
+$U$ s'écrit alors $V \times$ $I$, où $V$ est un ouvert de $E$ et $I$ un intervalle ouvert de $\mathbb{R}$. %
+Soit $y_0$ une solution du problème : $y_0' = f(y_0,u)$ , $y_0(s_0) = Y$ avec $s_0$ un temps dans $I$ et $Y$ un vecteur de $V$.
+}
+\end{minipage}
+\end{center}
+\item Montrer que l'on peut définir un nouveau problème de Cauchy : $y' = f(y,t)$, $y(0) = Y$\\
+eu égard la constance de $f$ en $t$, on précisera l'intervalle de définition de la nouvelle solution $y_{0 Y}$.
+
+\smallskip
+On suppose maintenant : $s_0 = 0$, $I$ en particulier contient $0$.
+\item A l'aide d'un changement de variable inspiré de la question précédente %
+et en utilisant une solution bien choisie à l'équation différentielle $y' = f(y)$, montrer :
+\[\varphi(t+s;0,Y) = \varphi(t;0,\varphi(s;0,Y))\]
+\end{enumerate}
+%On note : $\phi = \mathbb{R} \times U \rightarrow V : (t,x) \mapsto \varphi(t;0,x)$, on remarque que $\phi$ n'est pas toujours défini pour tout temps $t$.\\
+%$\phi$ définit, lorsque $I$ est $\mathbb{R}$ -flot complet-, un morphisme du groupe additif $(\mathbb{R} , +)$ dans le groupe des bijections de $V$ sur lui-même. l'image de ce morphisme peut être incluse dans le groupe des homéomorphismes, des difféomorphismes... de $V$ sur lui-même, suivant la régularité de $f$.
+%\textit{On appelle parfois groupe à un paramètre d'automorphismes continus, différentiels... un morphisme continu de $\mathbb{R}$ dans le groupe d'automlorphismes continus, différentiels, de l'espace sous-jacent, ici $V$.}
+\end{exer}
+
+\begin{exer}[Explosion en temps fini, espace des phases de dimension finie]
+Soient $n$ un entier strictement positif, $J$ un intervalle ouvert réel %
+et $f(.,.)$ un champ de vecteurs défini sur $J \times \mathbb{R}^n$. %
+On choisit un couple $(t_0,y_0)$ de conditions initiales sur $J \times \mathbb{R}^n$. %
+On note $y$ la solution du problème de Cauchy associé, $] T_{\ast} , T^{\ast} [$ son intervalle de définition.
+\begin{enumerate}
+\item Montrer que l'on se trouve dans l'alternative -non exclusive- suivante :
+\begin{enumerate}
+\item $T^{\ast} = \sup J$ ;
+\item $\lim\limits_{t \rightarrow T^{\ast}} \| y(t) \| = + \infty$.
+\end{enumerate}
+
+\smallskip
+\textit{Application.} Soit $t_0$ un nombre réel, $g$ et $h$ des fonctions, respectivement $C^1$ %
+définie sur $\mathbb{R}_+^{\ast}$ et continue sur $[t_0 , + \infty [$, dans $\mathbb{R}_+^{\ast}$, telles que :
+\[\forall a \in \mathbb{R}_+^{\ast} , \int\limits_a^{+ \infty} \frac{1}{g(x)} dx = + \infty\]
+\item Montrer que les solutions de l'équation différentielle : $x^{'} = h \cdot g(x)$ sont définies globalement.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Déterminer la forme générale du portrait de phase autonome en dimension 1.
+\end{exer}
+
+\begin{exer}
+Montrer que le problème général : $y' = f(y,t)$, posé sur un ouvert $U$ d'un produit $E \times I$ %
+où $E$ est un espace de Banach et $I$ un intervalle réel, %
+est équivalent à une équation différentielle autonome sur un espace que l'on précisera.\\
+Critiquer la pertinence d'une telle simplification.
+\end{exer}

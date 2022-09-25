@@ -1,0 +1,91 @@
+% \section{Espaces complets}
+
+\begin{exer}
+Soit $E$ un espace vectoriel normé.
+
+Montrer que $E$ est un espace de Banach si et seulement si toute série absolument convergente de $E$ est convergente.
+\end{exer}
+
+\begin{exer}
+%Je donne, si cela s'avère nécessaire, la définition d'un ensemble dénombrable, ainsi que quelques exemples de tels ensembles, sur suggestion de l'élève. Plus particulièrement, j'établis que $\mathbb{Q}$ est dénombrable.\\
+Soit $(E,d)$ un espace métrique complet, par exemple un fermé d'un espace de Banach, muni de la distance associée à la norme.
+\begin{enumerate}
+\item Théorème de Baire : soit $(U_n)_{n \in \mathbb{N}}$ une suite d'ouverts denses de $E$.
+Montrer que $\bigcap_{n \in \mathbb{N}}U_n$ est dense dans $E$.
+\item Montrer que la réunion d'une suite de fermés d'intérieurs vides de $E$ est d'intérieur vide.
+\item Montrer que $\mathbb{R}$ n'est pas dénombrable.
+\item Montrer que $\mathbb{R} \backslash \mathbb{Q}$ est dense dans $\mathbb{R}$.
+
+\medskip
+On note maintenant $\mathbb{K}$ l'un des deux corps $\mathbb{R}$ ou $\mathbb{C}$.
+\item Soit $E$ un espace de Banach sur $\mathbb{K}$. Montrer que $E$ n'admet pas de base dénombrable.
+%Indication : Soit $(x_n)$ une éventuelle base dénombrable de $E$. Considérer la suite $(Vect(x_k)_{k \in 0,n})_n$.\\
+\item Montrer qu'il n'existe pas de norme pour laquelle $\mathbb{K}[X]$ soit un espace de Banach.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+$\mathbb{K}$ est ici le corps $\mathbb{R}$ ou $\mathbb{C}$.\\
+On note $l^{\infty}(\mathbb{K})$ l'espace vectoriel des suites bornées de $\mathbb{K}$ muni de la norme $\|.\|_{\infty}$ définie par :
+\[\forall (u_n) \in l^{\infty}(\mathbb{K}) , \|(u_n)\|_{\infty} = \sup_{n \in \mathbb{N}} u_n\]
+Montrer que $l^{\infty}(\mathbb{K})$ est un espace de Banach.
+\end{exer}
+
+\begin{exer}
+$\mathbb{K}$ est ici le corps $\mathbb{R}$ ou $\mathbb{C}$. $p \in [1,+\infty[$\\
+On note, pour tout réel $p$ supérieur ou égal à $1$, $l^{p}(\mathbb{K})$ l'espace vectoriel des suites $(u_n)$ de $\mathbb{K}$ %
+telles que $\sum \lvert u_n \rvert^{p}$ converge, muni de la norme $\|.\|_{p}$ définie par :
+\[\forall (u_n) \in l^{p}(\mathbb{K}) , \|(u_n)\|_{p} = (\sum_{n \in \mathbb{N}} \lvert u_n \rvert^{p})^{1/p}\]
+\begin{enumerate}
+\item Quelles relations d'inclusion existe-t-il entre les espaces $l^{p}(\mathbb{K})$ ?
+\item Montrer que ces espaces vectoriels normés sont de Banach.
+\end{enumerate}
+%Eventuellement, afin de faciliter les calculs, je demande de se restreindre au cas de $l^{1}(\mathbb{K})$.
+\end{exer}
+
+\begin{exer}
+Soit $E$ un espace vectoriel normé.\\
+Montrer que $E$ est un espace de Banach si et seulement si toute série absolument convergente de $E$ est convergente.
+\end{exer}
+
+\begin{exer}
+$\mathbb{K}$ est ici le corps $\mathbb{R}$ ou $\mathbb{C}$.\\
+On note $l^{\infty}(\mathbb{K})$ l'espace vectoriel des suites bornées de $\mathbb{K}$ muni de la norme %
+$\|.\|_{\infty}$ définie par :
+\[\forall (u_n) \in l^{\infty}(\mathbb{K}) , \|(u_n)\|_{\infty} = \sup_{n \in \mathbb{N}} u_n\]
+Montrer que $l^{\infty}(\mathbb{K})$ est un espace de Banach.
+\end{exer}
+
+\begin{exer}[Dual de $l^1$]
+On se place dans l'espace des suites réelles $(u_n)_n$ telles que la série $\sum_n u_n$ est absolument convergente, nous notons cet espace $l^1(\mathbb{R})$ et le munissons de la norme $\| \|_1$ définie par : $\forall (u_n)_n \in l^1 , \| (u_n) \|_1 = \sum\limits_{n=0}^{+\infty} | u_n |$. On appelle dual topologique de cet espace, et note $(l^1)'$, l'espace vectoriel des formes linéaires continues de $l^1$, que nous munirons de la norme subordonnée à $\| \|_1$à la source, $| |$ à l'arrivée.\\
+Montrer qu'il existe une isométrie linaire $\phi$ de l'espace $l^{\infty}$ des suites réelles bornées muni de la norme infinie, sur $(l^1)'$, telle que :
+\[\forall (a_n)_n \in l^{\infty} , \forall (u_n) \in l^1 , \phi ((a_n)_n) ((u_n)_n) = \sum\limits_{n=0}^{+\infty} a_n u_n\]
+\end{exer}
+
+\begin{exer}
+\begin{enumerate}
+\item Enoncer le th\'eor\`eme de convergence domin\'ee de Lebesgue.
+\item Rappeler la d\'efinition de l'int\'egrabilit\'e au sens de Riemann sur un segment.
+\item Que dire de l'int\'egrale d'une limite uniforme de fonctions Riemann-int\'egrables ?
+
+\medskip
+Soit maintenant $I$ un intervalle r\'eel. On appelle fonction localement int\'egrable sur $I$ une fonction int\'egrable sur tout segment de $I$. %
+On peut se ramener au cas au cas d'un intervalle $I$ de la forme $[a,b[$, o\`u $a$ est un nombre r\'eel, et $b$ un e\'el\'ement de $\mathbb{R}\cup\{+\infty\}$, strictement sup\'erieur \`a $a$.
+\item Montrer le th\'eor\`eme de convergence dominée pour l'intégrale de Riemann impropre :
+
+\medskip
+\fbox{
+\begin{minipage}{15cm}
+Soit $(f_n)$ une suite de fonctions r\'eelles d\'efinies sur $I$, localement int\'egrables et domin\'ees par une fonction $\phi$, positive et int\'egrable sur $I$. On note que les int\'egrales des termes de $(f_n)$ convergent. %
+Si $(f_n)$ converge vers une limite $f$ d\'efinie sur $I$, alors $f$ est localement int\'egrable sur $I$, son int\'egrale sur $I$ converge et :
+\[\lim_n \int\limits_a^b f_n(t) dt = \int\limits_a^b f(t) dt\]
+\end{minipage}
+}
+\end{enumerate}
+\end{exer}
+
+\begin{exer}
+Soit $f$ une fonction réelle définie sur $\mathbb{R}$, telle que $f$ et $f'^2$ soient intégrables.\\
+Montrer que $f$ tend vers $0$ en $+ \infty$ et $- \infty$.
+%Indication : penser au critère de Cauchy. On pourra utiliser le résultat de l'exercice précédent.
+\end{exer}

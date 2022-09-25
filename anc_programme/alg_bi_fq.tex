@@ -1,0 +1,112 @@
+% \section{Alg\g{e}bre bilin\'eaire et formes quadratiques}
+
+\subsection{Alg\g{e}bre bilin\'eaire}
+
+\begin{exer}
+Soit $A = \mathbb{R} \rightarrow M_n(\mathbb{R}) : t \mapsto A(t)$ une application continue qui prend des valeurs antisymétriques.\\
+Montrer que toute solution de l'équation différentielle en $X$, fonction de $\mathbb{R}$ dans $M_n(\mathbb{R})$ :
+\[\forall t \in \mathbb{R} , X'(t) = A(t)X(t)\]
+telle que $X(0)$ soit une matrice orthogonale, prend ses valeurs dans l'ensemble des matrices orthogonales.
+\end{exer}
+
+\begin{exer}
+%Cet exercice utilise les résultats de l'exercice ??\\
+Soit $n$ un entier naturel non nul. On notera $Asym(n,\mathbb{R})$ l'espace des matrices antisymétriques d'ordre $n$ %
+sur $\mathbb{R}$.\\
+Montrer que l'exponentielle de matrices induit une surjection de $Asym(n,\mathbb{R})$ sur $SO(n,\mathbb{R})$.
+\end{exer}
+
+\subsection{Formes bilin\'eaires et quadratiques}
+
+\begin{exer}
+Sioent $q$ et $q'$ deux formes quadratiques de même cône isotrope.
+
+Donner une relation simple entre $q$ et $q'$.
+\end{exer}
+
+\begin{exer}
+Montrer que les formes bilinéaires $\phi$, non dégénérées, d'un espace vectoriel vérifiant :
+\[\forall (x,y) \in E^2, \phi (x,y) = 0 \Rightarrow \phi (y,x) = 0\]
+sont les formes bilinéaires symétriques et antisymétriques.
+
+\medskip
+On pourra \'etudier les familles de formes lin\'eaires, indexées en $x$ 
+$d_x : E \rightarrow \mathbb{K} : y \mapsto \phi(y,x)$ et $g_x : E \rightarrow \mathbb{K} : y \mapsto \phi(x,y)$
+\end{exer}
+
+\newpage
+
+\begin{center}
+\fbox{
+\begin{minipage}{15cm}
+\textit{
+Pour toute forme quadratique $q$, on appelle groupe orthogonal de $q$ et note $O(q)$ %
+l'ensemble des automorphismes linéaires $u$ de $E$, encore appelés isométries, tels que :
+\[\forall x \in E , q(u(x)) = q(x)\]
+En particulier, une isom\'etrie pour $q$ pr\'eserve sa forme polaire $\varphi$
+}
+\end{minipage}
+}
+\end{center}
+
+\begin{exer}[Commutant du groupe $O(q)$ dans $\mathcal{L}(E)$]
+Soit $E$ un espace vectoriel de dimension finie. On considère, dans cet exercice, une forme quadratique $q$ non dégénérée sur $E$, on note $\varphi$ sa forme polaire.
+
+Soit de plus $a$ un vecteur de $E$, non isotrope pour $q$. %
+On note $A$ la droite vectorielle de $E$ engendrée par $a$, et $B$ l'espace $\{ x \in E | \varphi (a,x) = 0 \}$.
+\begin{enumerate}
+\item Montrer que : $E = A \oplus B$.
+\item Avec cette notation, montrer que la symétrie linéaire par rapport à $A$, et parallèlement à $B$, est une isométrie pour $q$.
+
+\medskip
+On note :\[C = \{ v \in L(E) | \forall u \in O(q) , uv = vu\}\]
+cet ensemble est appelé le commutant de $O(q)$ dans $L(E)$.\\
+Soit $v$ un élément de $C$.
+\item Soit encore $a$ un vecteur de $E$ non isotrope pour $q$. Montrer que : %
+$\exists \lambda_a \in \mathbb{R} | v(a) = \lambda_a a$.
+\item Que dire du scalaire $\lambda_b$, défini pour un autre quelconque vecteur non isotrope de $q$ ?
+\item Etudier le cas d'un vecteur isotrope de $q$.
+\item Déterminer $C$.
+\end{enumerate}
+\end{exer}
+
+\begin{exer}[Condition de minimalité de $O(q)$]
+%\textit{Cet exercice reprend les notations adoptées au début de l'exercice précédent, %
+%et utilise le résultat concernant le vecteur isotrope de $q$.}
+On reprend la notation de l'exercice pr\'ec\'edent pour le groupe orthogonal.
+
+\medskip
+Soient $q$ et $q'$ deux formes quadratiques sur $E$, on suppose que $q$ est non dégénérée. %
+On note encore $b$ et $b'$ les formes polaires respectives pour $q$ et $q'$.
+\begin{enumerate}
+\item Montrer l'existence d'un endomorphisme $u$ de $E$ tel que :
+\[\forall (x,y) \in E^2 , b'(x,y) = b(u(x),y)\]
+autrement dit :
+\[\forall (x,y) \in E^2 , b'(x,y) = b(x,u(y))\]
+On suppose maintenant que : $O(q') \subseteq O(q)$.
+\item Montrer que cette inclusion est une égalité.
+\end{enumerate}
+\end{exer}
+
+\subsection{Formes sesquilin\'eaires complexes}
+
+\begin{exer}
+Montrer que la norme de $M_n (\mathbb{C})$ qui dérive du produit scalaire $(A,B) \mapsto Tr(A^{\ast} B)$ %
+est une norme d'algèbre.\\
+Calculer la norme d'une matrice Hermitienne.
+\end{exer}
+
+\begin{exer}
+Soient $A$ et $B$ deux matrices Hermitiennes. Montrer que les valeurs propres de $AB - BA$ sont imaginaires pures.
+\end{exer}
+
+\begin{exer}
+Montrer qu'une matrice réelle -respectivement complexe- inversible est le produit d'une matrice orthogonale %
+par une matrice symétrique définie positive -respectivement une matrice unitaire par une matrice Hermitienne définie positive.
+\end{exer}
+
+\begin{exer}
+On définit un ordre $\preceq$ sur l'ensemble des matrices hermitiennes positives par : $H \preceq K$ si et seulement si $K - H$ est positive.
+
+Montrer que $M_n(\mathbb{C}) \rightarrow M_n(\mathbb{C}) : A \mapsto A^{\ast} A$ est convexe pour cette relation d'ordre.
+\end{exer}
