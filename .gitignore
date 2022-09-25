@@ -1,0 +1,18 @@
+# Figures
+*.png
+*.pdf
+
+# Fuse
+.fuse*
+
+# LaTeX
+.aux
+.bbl
+.blg
+.dvi
+.log
+.tex.backup
+.out
+.ps
+.toc
+.thm
