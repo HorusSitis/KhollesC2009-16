@@ -1,11 +1,82 @@
 \section{Arithmétique}
 
 \begin{exer}
-Montrer que le $\mathbb{C}$-espace vectoriel $\mathbb{C} (X)$ est de dimension non nénombrable.\\
+Montrer que le $\mathbb{C}$-espace vectoriel $\mathbb{C} (X)$ est de dimension non dénombrable.
+
 On considérera la famille $(\frac{1}{X-\lambda})_{\lambda \in \mathbb{C}}$.
 \end{exer}
 
-Théorème de Mason, théorème de Liouville.
+Remarquons que $\mathbb{C} (X)$, qui admet $\mathbb{C} [X]$ comme sous-espace vectoriel, %
+n'est pas de dimension finie. %
+%%
+Deux solutions sont possible pour cet exercice, %
+selon le sens accord\'e \g{a} l'expression \og{} dimension non dénombrable \fg{} . %
+%%
+Elles reposent toutes les deux sur l'unicit\'e de la d\'ecomposition en \'el\'ements simples %
+d'une fraction rationnelle.
+
+\begin{sol}[Existence d'une famille libre non d\'enombrable]
+Pour r\'epondre \g{a} la question, il suffit de montrer que la famille \((\frac{1}{X-\lambda})_{\lambda \in \mathbb{C}}\), %
+qui est non d\'enombrable, est libre. %
+
+\par
+Une combinaison lin\'eaire de termes de cette famille s'\'ecrit :
+
+\begin{equation}
+\sum\limits_{i=1}^n\, \frac{\alpha_i}{X-\lambda}
+%%
+\label{eq:def_cl_frac}
+\end{equation}
+
+\((\alpha_i)_{i=1}^n\) \'etant une famille finie de nombres complexes. %
+Supposons que \(n>1\) et que tous les coefficients \(\alpha_i\) soient non nuls, %
+et que la fraction rationnelle d\'efinie par~\rfeq{eq:def_cl_frac} soit nulle. %
+%%
+L'\'egalit\'e
+
+\[\sum\limits_{i=1}^n\, \frac{\alpha_i}{X-\lambda}=0,\]
+%%
+est la d\'ecomposition en \'el\'ements simples de la fraction nulle, ce qui est absurde car celle-ci n'a pas de p\^ole. %
+%%
+Conclusion : il n'existe pas de combinaison lin\'eaire, \g{a} coefficients non nuls, des termes de \((\frac{1}{X-\lambda})_{\lambda \in \mathbb{C}}\), %
+dont la valeur soit \(0\). %
+Cette famille est donc libre.
+\end{sol}
+
+\begin{sol}[Non existence d'une famille d\'enombrable g\'en\'eratrice]
+Le cas d'une famille g\'en\'eratrice finie est d\'ej\g{a} trait\'e, car un espace vectoriel de dimension finie ne peut avoir %
+$\mathbb{C} [X]$ comme sous-espace vectoriel.
+
+\par
+Soit \((F_i(X))_{i\in\mathbb{N}}\) une suite de frations rationnelles. %
+Pour tout \(i\), \(F_i(X)\) admet une suite finie de p\^oles \((\lambda_j)_{j=1}^{n_i}\). %
+%%
+L'ensemble
+
+\begin{equation}
+\bigcup\limits_{i\in\mathbb{N}}\,\text{Im}((\lambda_j)_{j=1}^{n_i})
+%%
+\label{eq:def_poles_ij}
+\end{equation}
+%%
+de tous les p\^oles des termes de \((F_i(X))\) est une union finie d'ensembles d\'enombrables, %
+il est donc d\'enombrable - on peut r\'eindexer les p\^oles qui apparaissent dans l'expression~\rfeq{eq:def_poles_ij} %
+pour obtenir une suite index\'ee dans \(\mathbb{N}\). %
+%%
+Puisque \(\mathbb{C}\), comme \(\mathbb{R}\)\footnote{Voir la section concernant le espaces complets, dans ancien programme.}%
+est non d\'enombrable, il existe une nombre complexe \(\lambda_{\infty}\) qui n'appartient pas \g{a} l'ensemble des p\^oles des fractions \(F_i(X)\). %
+%%
+La fraction
+
+\[\frac{1}{X-\lambda_{\infty}},\]
+%%
+n'est pas une combinaison lin\'eaire de la famille \((F_i(X))_{i\in\mathbb{N}}\), %
+car de telles combinaisons ont des p\^oles distincts de \(\lambda_{\infty}\). %
+%%
+Ainsi \((F_i(X))\) n'est-elle pas g\'en\'eratrice de \(\mathbb{C}(X)\).
+\end{sol}
+
+% Théorème de Mason, théorème de Liouville.
 
 \begin{exer}[Densité naturelle et diviseurs communs]
 Soit $A$ une partie de $\mathbb{N}$.\\

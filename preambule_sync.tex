@@ -13,7 +13,13 @@
 
 %\usepackage{amsthm}
 \usepackage{framed}
-\usepackage[amsthm,thmmarks,framed]{ntheorem}
+%%% ----------- attention à la numérotation des équations, pas de thmmarks ! ----------- %%%
+\usepackage[amsthm,%
+%thmmarks,%
+framed]
+{ntheorem}
+%% ----------- éventuellements remplacer par ... ----------- %%
+%\usepackage{amsthm}
 
 \usepackage{multicol}
 %\begin{multicols}[titre]{nb colonnes}
@@ -24,9 +30,9 @@
 %\usepackage{hyperref} Probl\`emes avec la mise en page des exercices.
 
 %\dottedcontents{section}[left]{above}{labelwidth}{leaderwidth = espacement entre les pointillés par exemple}
-\dottedcontents{section}[0em]{\vspace{0.35cm}\bfseries}{3em}{0.75em}
-\dottedcontents{subsection}[1.5em]{\vspace{0.15cm}}{4em}{0.75em}
-\dottedcontents{subsubsection}[3em]{}{5em}{0.75em}
+% \dottedcontents{section}[0em]{\vspace{0.35cm}\bfseries}{3em}{0.75em}
+% \dottedcontents{subsection}[1.5em]{\vspace{0.15cm}}{4em}{0.75em}
+% \dottedcontents{subsubsection}[3em]{}{5em}{0.75em}
 
 \setlength{\parindent}{0cm}
 
@@ -55,13 +61,26 @@
   
 {%
 \theoremstyle{break}
+% \theoremprework{\vspace{0.5cm}\begin{minipage}{\textwidth}}
+% \theorempostwork{\etoile\end{minipage}}
+\theoremheaderfont{\scshape}
+\theorembodyfont{\normalfont}
+\theoremseparator{ :\newline\vspace{0.2cm}}
+% \newtheorem{exer}{Exercice}[section]
+\newframedtheorem{exer}{Exercice}[section]
+}
+
+{%
+\theoremstyle{break}
 \theoremprework{\vspace{0.5cm}\begin{minipage}{\textwidth}}
 \theorempostwork{\etoile\end{minipage}}
 \theoremheaderfont{\scshape}
 \theorembodyfont{\normalfont}
 \theoremseparator{ :\newline\vspace{0.2cm}}
-\newtheorem{exer}{Exercice}[section]
+\newtheorem{sol}{Solution}[exer]
 }
+
+%%% ------------------------------------------ %%%
   
 {
 \theoremstyle{break}
@@ -73,6 +92,25 @@
 \theoremseparator{ :\newline\vspace{0.2cm}}
 \newtheorem{ques}{Question}[section] %Autre pr\'esentation : encadrer les \'enonc\'es ?
 } 
-  
+
+{
+\theoremstyle{break}
+%\theoremprework{\vspace{0.2cm}}
+\theorempostwork{\etoile}%\hfill\rule{0.6\linewidth}{0.4pt}\hfill\null}
+
+\theoremheaderfont{\scshape}
+\theorembodyfont{\normalfont}
+\theoremseparator{ :\newline\vspace{0.2cm}}
+\newtheorem{rep}{R\'eponse}[ques] %Autre pr\'esentation : encadrer les \'enonc\'es ?
+}
+
+%%% ------------------------------------------ %%%
+
+
 %\setcounter{section}{-1}
-\renewcommand{\thesection}{\Roman{section}}
+% \renewcommand{\thesection}{\Roman{section}}
+
+\newenvironment{remer}{\setlength{\parskip}{0.35cm}\em}{\vspace{1cm}\setlength{\parskip}{0.0cm}}
+
+\renewcommand{\theequation}{\thechapter \hspace{-0.1cm} $\cdot$ \hspace{-0.1cm}\arabic{equation}}%%\hspace*{0.05pt}
+\newcommand{\rfeq}[1]{(\ref{#1})}
