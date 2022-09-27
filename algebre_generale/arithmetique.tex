@@ -1,5 +1,11 @@
 \section{Arithmétique}
 
+% \begin{equation}
+% 
+% %%
+% \label{}
+% \end{equation}
+
 \begin{exer}
 Montrer que le $\mathbb{C}$-espace vectoriel $\mathbb{C} (X)$ est de dimension non dénombrable.
 
@@ -94,6 +100,47 @@ alors $A$ contient une infinité d'entiers premiers entre eux deux-à-deux.
 \end{enumerate}
 \end{exer}
 
+\begin{sol}
+%%
+\begin{enumerate}
+\item Remarquons que pour tout entier \(n\) strictement positif :
+
+\begin{equation}
+n=\lfloor \frac{n}{\alpha} \rfloor \, \alpha + r_n ,
+%%
+\label{eq:div_alpha_n}
+\end{equation}
+%%
+o\g{u} \(r_n\) est un entier compris entre \(0\) et \(\alpha-1\). %
+On peut aussi \'ecrire :
+
+\begin{equation}
+\sharp A \cap [\![1,n]\!] = \lfloor \frac{n}{\alpha} \rfloor.
+%%
+\label{eq:card_n_sur_alpha}
+\end{equation}
+%%
+En combinant~\rfeq{eq:div_alpha_n} et~\rfeq{eq:card_n_sur_alpha} on obtient :
+
+\begin{equation}
+\dfrac{\sharp A \cap [\![1,n]\!]}{n} = \dfrac{1}{\alpha}\left(1-\frac{r_n}{n}\right) .
+%%
+\label{eq:dens_n_rn}
+\end{equation}
+%%
+Puisque la suite \((r_n)_n\) est born\'ee, le terme de droite de~\rfeq{eq:dens_n_rn} tend vers \(\frac{1}{\alpha}\) lorsque \(n\) tend vers \(+\infty\). %
+Cette limite est la densit\'e naturelle de \(\alpha\mathbb{N}^{\ast}\), qui en particulier existe.
+%%
+\item \dots
+%%
+\item Remarquons que \(\mathbb{N}^{\ast}\) admet ue densit\'e naturelle, qui est \'egale \g{a} \(1\). %
+Il existe donc une infinit\'e d'entiers naturels premiers entre eux deux \g{a} deux. %
+%%
+Comme les facteurs premiers de deux quelconques de ces entiers sont distincts, il existe donc une infinit\'e de nombres premiers.
+\end{enumerate}
+%%
+\end{sol}
+
 \begin{exer}[Le théorème d'infinitude de l'ensemble des nombres premiers revisité]
 On définit un ensemble $\tau$ parties de $\mathbb{Z}$ par :
 \[\forall P \in \mathbb{N} , P \in \tau \Leftrightarrow ( \forall m \in P , \exists a \in \mathbb{Z} | m + a \mathbb{Z} \subseteq P)\]
@@ -140,3 +187,71 @@ On dit que $A$ est Noetherien si et seulement si tout idéal de $A$ est engendr�
 %(iii) Montrer que si un anneau est principal, alors toute suite croissante de ses idéaux est stationnaire.\\
 %(iv) Considérer la suite des idéaux respectivement engendrés par les termes de la suite d'éléments indécomposables de $A$ définie aux questions (i) et (ii). Conclure.
 \end{exer}
+
+\begin{sol}
+%%
+\begin{enumerate}
+\item Soit \((I_n)_{n\in\mathbb{N}}\) unes suite croissante d'id\'eaux de \(A\). %
+%%
+Montrons que \(\bigcup\limits_{i\in\mathbb{N}}\,I_n\), autrement not\'e \(I\), est un id\'eal de \(A\). %
+Soient en effet \(x\) et \(y\) deux \'el\'ements de cete union. %
+En particulier, il existe deux enters \(n_x\) et \(n_y\) tels que \(x\) et \(y\) appartiennent respectivement \g{a} %
+\(I_{n_x}\) et \(I_{n_y}\). %
+%%
+Mais la famille \((I_n)_{n\in\mathbb{N}}\) est croissante : \(x\) et \(y\), et donc leur somme, appartiennent \g{a} l'id\'eal \(I_{\max{n_x, n_y}}\) de \(A\). %
+%%
+Enfin, si \(x\) appartient \g{a} \(I_n\) pour un certain \(n\) et si \(a\) est un \'el\'ement de \(A\), %
+alors \(ax\) appartient \g{a} \(I_n\), donc \g{a} \(\bigcup\limits_{i\in\mathbb{N}}\,I_n\).
+
+\par
+On peut maintenant d\'emontrer le r\'esultat principal de cette section. %
+En effet, \(A\) \'etant n\"otherien, \(I\) est engendr\'e par une famille finie \((x_i)_{i=1}^{n_I}\) de ses \'el\'ements. %
+En particulier, chaque \(x_i\) appartient \g{a} au moins un terme \(I_{n_i}\) de la suite \(I_n\) %
+- on peut par exemple prendre le premier terme de \((I_n)_n\) o\g{u} l'on reencontre \(x_i\). %
+%%
+Alors, tous les termes de la famille g\'en\'eratrice \((x_i)_i\) de \(I\) appartiennnent \g{a} \(I_{\max\limits_i{n_i}}\). %
+Cet id\'eal est donc confondu avec la limite \(I\) de la suite, qui est donc stationnaire.
+
+%%
+\item Raisonnons par l'absurde et supposons qu'il existe un \'el\'ement \(a\) de \(A\) qui n'est pas d\'ecomposable en produit de facteurs irr\'eductibles. %
+%%
+Plus particuli\g{e}rement, \(a\) ne peut \^etre ni irr\'eductible, ni inversible. %
+On peut donc \'ecrire
+
+\begin{equation}
+a = bc
+%%
+\label{eq:hyp_a_nondec}
+\end{equation}
+%%
+o\g{u} \(b\) et \(c\) sont non inversibles. %
+%%
+Les id\'eaux principaux \(b\,A\) et \(c\,A\) incluent \(a\,A\) d'apr\g{e}s ces relations de divisibilit\'e et la commutativit\'e de \(A\). %
+Supposons par exemple que l'inclusion r\'eciproque \(b\,A\subset a\,A\) soit v\'erifi\'ee. %
+On peut en particulier \'ecrire :
+
+\begin{equation}
+b=au\quad \text{donc} \quad b=bcu
+%%
+\label{eq:}
+\end{equation}
+%%
+Puisque \(A\) est int\g{e}gre, ceci implique que \(cu=1\), donc que \(c\) est inversible, absurde. %
+Par ailleurs, l'un au moins des facteurs \(b\) et \(c\) est ind\'ecomposable en produit de facteurs irr\'eductibles de \(A\), %
+car dans le cas contraire~\rfeq{eq:hyp_a_nondec} fournirait une d\'ecomposition de \(a\). %
+%%
+On a ainsi construit un \'el\'ement \(a_1\) de \(A\), \(b\) ou \(c\), %
+ind\'ecomposable comme \(a\), et tel que
+
+\begin{equation}
+a\,A \subsetneq a_1\, A
+%%
+\label{eq:st_inc}
+\end{equation}
+
+En it\'erant cette construction, on obtient donc une suite strictement croissante d'id\'eaux de \(A\), %
+ce qui est impossible d'apr\g{e}s la question pr\'ec\'edente.
+%%
+\end{enumerate}
+%%
+\end{sol}
