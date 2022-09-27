@@ -85,17 +85,24 @@ Ainsi \((F_i(X))\) n'est-elle pas g\'en\'eratrice de \(\mathbb{C}(X)\).
 % Théorème de Mason, théorème de Liouville.
 
 \begin{exer}[Densité naturelle et diviseurs communs]
-Soit $A$ une partie de $\mathbb{N}$.\\
+Soit $A$ une partie de $\mathbb{N}$.
+
+\par
 On dit que $A$ admet une densité naturelle, si et seulement si la suite :
 \[\left(\frac{\sharp A \cap [\![1,n]\!]}{n}\right)_{n \in \mathbb{N}^{\ast}}\]
-converge. On appelle densité de $A$, et note $d(A)$, cette limite lorsqu'elle existe.
+%%
+converge. %
+On appelle densité de $A$, et note $d(A)$, cette limite lorsqu'elle existe.
+%%
 \begin{enumerate}
 \item Soit $\alpha$ un entier strictement positif. Montrer que $\alpha \mathbb{N}$ admet une densité naturelle, %
 calculer cette densité.
+%%
+\item Soit \(F\) une partie finie de \(\mathbb{N}\). Que dire de la densit\'e de \(A\cup F\), en fonction de celle de \(A\) - existence, valeur ?
+%%
 \item Montrer que si $A$ est une partie de $\mathbb{N}$ qui admet une densité naturelle égale à $1$, %
 alors $A$ contient une infinité d'entiers premiers entre eux deux-à-deux.
-%Raisonner par l'absurde.
-%Lemme important : il existe au moins une famille (x_i) d'entiers de $A$, premiers entre eux deux à deux, maximale parmi les familles d'entiers de A qui ont cette propriété.
+%%
 \item Déduire de la question précédente un résultat classique en arithmétique.%Il s'agit du théorème d'infinitude de l'ensemble des nombres premiers.
 \end{enumerate}
 \end{exer}
@@ -133,7 +140,77 @@ Cette limite est la densit\'e naturelle de \(\alpha\mathbb{N}^{\ast}\), qui en p
 %%
 \item \dots
 %%
-\item Remarquons que \(\mathbb{N}^{\ast}\) admet ue densit\'e naturelle, qui est \'egale \g{a} \(1\). %
+\item Raisonnons par contrapos\'ee et soit \(A\) une partie de \(\mathbb{N}\) %
+qui ne contient pas une infinit\'e d'entiers premiers entre eux deux \g{a} deux.
+
+\begin{itemize}
+\item Il existe une suite finie \((u_n)_{n\in \![1,N_{\text{max}}]\!]}\) d'\'el\'ements de \(A\) premiers entre eux deux \g{a} deux, %
+qui est maximale pour cette propri\'et\'e. %
+%%
+En effet, dans le cas contraire, on construit par r\'ecurrence une suite \((u_n)_{n\in\mathbb{N}}\) %
+d'\'el\'ements de \(A\), premiers entre eux deux \g{a} deux ce qui est impossible par hypoth\g{e}se.
+
+\item Soit maintenant \(a\in A \setminus \mathrm{Im}\,(u_n)_{n\in \![1,N_{\text{max}}]\!]}\). %
+%%
+Il existe un terme \(u_{n_a}\) de \((u_n)_{n\in \![1,N_{\text{max}}]\!]}\) qui n'est pas premier avec \(a\) : %
+en particulier, \(a\) et \(u_{n_a}\) ont un facteur premier \(p_a\) en commun. %
+La relation :
+
+\begin{equation}
+a \in p_a\,\mathbb{N}
+%%
+\label{eq:fact_p_a}
+\end{equation}
+%%
+se g\'en\'eralise ainsi :
+
+\begin{equation}
+\left(A \setminus \mathrm{Im}\,(u_n) \right)\subset \bigcup\limits_{p\in\,P} p\,\mathbb{N},
+%%
+\label{eq:fact_P_A_minus_u}
+\end{equation}
+%%
+o\g{u} \(P\) est l'ensemble des nombres premiers divisant au moins l'un des termes de \((u_n)_{n\in \![1,N_{\text{max}}]\!]}\). %
+De m\^eme, pour tout \(n\), \(u_n\) vaut \(1\) ou appartient \g{a} l'union pr\'ec\'ecente. %
+Ainsi :
+
+\begin{equation}
+A \subset \{1\} \cup \bigcup\limits_{p\in\,P} p\,\mathbb{N},
+%%
+\label{eq:fact_P_A}
+\end{equation}
+
+\item On note que, comme chacun des ensembles \(p\,\mathbb{N}\), \(\bigcup\limits_{p\in\,P} p\,\mathbb{N}\) est p\'eriodique, %
+et que l'une de ses p\'eriodes est
+
+\begin{equation}
+\prod\limits_{p\in\,P}p.
+%%
+\label{eq:period_P}
+\end{equation}
+
+On montre, de la m\^eme mani\g{e}re que dans la question pr\'ec\'edente, que l'ensemble \(\bigcup\limits_{p\in\,P} p\,\mathbb{N}\) %
+admet une densit\'e naturelle, qui est \'egale \g{a}
+
+\begin{equation}
+\dfrac{\sharp \left(\bigcup\limits_{p\in\,P} p\,\mathbb{N} \cap [\![1,n]\!]\right)}{\prod\limits_{p\in\,P}p}.
+%%
+\label{eq:period_P}
+\end{equation}
+%%
+Puisque \(1\) n'appartient pas \g{a} \(\bigcup\limits_{p\in\,P} p\,\mathbb{N}\), %
+ce quotient est strictement inf\'erieur \g{a} \(1\).
+
+\par
+Remarquons enfin que la valeur ou l'existence de la densit\'e naturelle d'une partie de \(\mathbb{N}\) est inchang\'ee %
+par r\'eunion avec un ensemble fini : \(\{1\} \cup \bigcup\limits_{p\in\,P} p\,\mathbb{N}\) admet une densit\'e strictement inf\'erieure \g{a} \(1\).
+
+\item D'apr\g{e}s la relation~\rfeq{eq:fact_P_A}, \(A\) ne peut donc pas admettre une densit\'e \'egale \g{a} \(1\). %
+En particulier, il admet une densit\'e strictement inf\'erieure \g{a} \(1\) ou n'admet pas de densit\'e.
+%%
+\end{itemize}
+%%
+\item Remarquons que \(\mathbb{N}^{\ast}\) admet une densit\'e naturelle, qui est \'egale \g{a} \(1\). %
 Il existe donc une infinit\'e d'entiers naturels premiers entre eux deux \g{a} deux. %
 %%
 Comme les facteurs premiers de deux quelconques de ces entiers sont distincts, il existe donc une infinit\'e de nombres premiers.
