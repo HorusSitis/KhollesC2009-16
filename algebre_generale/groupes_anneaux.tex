@@ -1,8 +1,23 @@
 \section{Groupes, anneaux}
 
+% \begin{equation}
+% 
+% %%
+% \label{}
+% \end{equation}
+
+% \begin{sol}
+% \begin{enumerate}
+% \item %%
+% %%
+% \item %%
+% \end{enumerate}
+% \end{sol}
+
 \begin{exer}
-Soit $E$ un ensemble.\\
-Montrer que $E$ est infini si et seulement si, toute bijection de $E$ sur lui-même stabiliseau moins une partie stricte de $E$.
+Soit $E$ un ensemble.
+
+Montrer que $E$ est infini si et seulement si, toute bijection de $E$ sur lui-même stabilise au moins une partie stricte de $E$.
 \end{exer}
 
 \begin{exer}[Cas particulier du théorème de Cauchy]
@@ -18,7 +33,7 @@ Soit $(G,.)$ un groupe abélien fini, noté multiplicativement. Pour tout élém
 \begin{enumerate}
 \item Soient $x$ et $y$ deux éléments de $G$ tels que $O(x)$ et $O(y)$ soient premiers entre eux. Déterminer l'ordre de $xy$.
 \item On suppose ici $x$ et $y$ quelconques. Montrer qu'il existe un élément $z$ de $G$ tel que : $O(z) = O(x) \vee O(y)$.
-\item En déduire l'existence d'un élément de $G$ dont l'ordre $m$ est le ppcm des ordres des éléments de $G$. %
+\item\label{ques:ord_ppcm} En déduire l'existence d'un élément de $G$ dont l'ordre $m$ est le ppcm des ordres des éléments de $G$. %
 $m$ est appelé exposant de $G$.
 \item Supposons maintenant :\[\forall d \in \mathbb{N}^{\ast} , \lvert \{ x \in G / x^d = 1 \} \rvert \leqslant d\]
 Montrer que $G$ est cyclique.
@@ -26,6 +41,169 @@ Montrer que $G$ est cyclique.
 tout sous-groupe fini du groupe multiplicatif de $\mathbb{K}$ est cyclique.
 \end{enumerate}
 \end{exer}
+
+\begin{sol}
+\begin{enumerate}
+\item Supposons :
+
+\begin{equation}
+(xy)^k=1
+%%
+\label{}
+\end{equation}
+%%
+pour un certain entier \(k\). %
+La commutativit\'e de l'anneau \(A\) permet d'\'ecrire :
+
+\begin{equation}
+(xy)^k = x^k\,y^k
+%%
+\label{}
+\end{equation}
+
+Ainsi, \(x^k\) est une puissance de \(y\), ce qui entra\^ine :
+
+\begin{equation}
+(x^k)^{O(y)} = 1
+%%
+\label{eq:xk_oy}
+\end{equation}
+
+Mais \(x^k\) est aussi une puissance de \(x\), donc :
+
+\begin{equation}
+(x^k)^{O(x)} = 1
+%%
+\label{eq:xk_ox}
+\end{equation}
+
+Or \(O(x)\) et \(O(y)\) sont premiers entre eux : il existe deux entiers \(u\)et \(v\) tels que
+
+\begin{equation}
+O(x) u + O(y) v = 1
+%%
+\label{eq:bezout_oxy}
+\end{equation}
+
+Les relations~\rfeq{eq:bezout_oxy}, \rfeq{eq:xk_ox} et~\rfeq{eq:xk_oy} entra\^inent alors :
+
+\begin{equation}
+(x^k)^{O(x) u + O(y) v} = x^k \quad \text{donc} \quad x^k = 1
+%%
+\label{}
+\end{equation}
+
+On en d\'eduit que \(y^k=1\). %
+Il s'ensuit que \(k\) est divisible par \(O(x)\) et par \(O(y)\), donc par leur produit car ces entiers sont premiers entre eux \textbf{raccourci possible ?}. %
+R\'eciproquement, il est facile de voir que \((xy)^{O(x)\,O(y)}=1\) : %
+l'ordre de \(xy\) est donc exactement \(O(x)\,O(y)\).
+
+%%
+\item Soient \(x\) et \(y\) deux \'el\'ements de \(G\), d'ordres respectifs \(m\) et \(n\). %
+On peut \'ecrire :
+
+\begin{equation}
+m = dm' \quad\text{et}\quad n=dn'\, ,
+%%
+\label{}
+\end{equation}
+%%
+o\g{u} \(d=m\wedge n\), %
+
+
+
+
+
+%%
+\item\label{seq_Aa_oppcm} On se va construire une suite \((A_k, a_k)_k\), o\g{u} \((A_k)_k\) est une suite strictement croissante de parties de \(G\), %
+\(a_k\in A_k\) pour tout \(k\) et \(O(a_k)=\vee_{x\in A_k} \, O(x)\). %
+Le dernier terme de cette suite founrira la solution.
+
+\begin{itemize}
+%%
+\item %
+On pose : \(A_1=\{1\}\) et \(a_1=1\), %
+ce couple \((A_1, a_1)\) v\'erifie les propri\'et\'es voulues pour initialiser la suite.
+
+\item Supposons la suite construite jusqu'\g{a} un rang \(k\). %
+Alors deux possibilit\'es existent :
+
+\begin{description}
+%%
+\item [\(A_k=G\) :] la construction d'arr\^ete ;
+%%
+\item [\(A_k \nsubseteq G\) :] on choisit un \'el\'ement \(b\) dans l'ensemble fini \(G \setminus A_k\). %
+% Si 
+Alors \(a_k \, b\) est d'ordre \(\left(\vee_{x\in A_k} \, O(x)\right) \vee O(b)\) d'apr\g{e}s la question pr\'ec\'edente. %\(\)
+Comme le ppcm est associatif - il correspond \g{a} une intersectin d'id\'eaux de \(\mathbb{Z}\), %
+on peut encore \'ecrire :
+
+\begin{equation}
+O(a_k\, b) = \vee_{x\in A_k \cup \{b\}} \, O(x).
+%%
+\label{}
+\end{equation}
+%%
+On peut encore \'ecrire, pour la m\^eme raison et par idempotence du ppcm :
+
+\begin{equation}
+O(a_k\, b) = \vee_{x\in A_k \cup \{b, a_k\,b\}} \, O(x).
+%%
+\label{}
+\end{equation}
+
+Ainsi, en posant \(A_{k+1} = A_k \cup \{b, a_k\,b\}\) et \(a_{k+1}=a_k\, b\), %
+on obtient le terme de rang \(k+1\) de la suite.
+%%
+\end{description}
+
+Cet algorithme s'arr\^ete car \((A_k)_k\) est une suite strictement croissante de parties de l'ensemble fini \(G\), %
+on peut aussi invoquer la stricte croissance et la bornitude de \(\sharp (A_k)_k\). %
+%%
+Le couple de rang maximal \((A_{k_{\max}}, a_{k_{\max}})\) nous donne la r\'eponse \g{a} la question.
+%%
+\end{itemize}
+
+\item Soit \(m\) le ppcm des ordres des \'el\'ements de \(G\). %\(\mathbb{K}^{\times}\)
+% et \(a\) un \'el\'ement de \(G\) d'ordre \(m\).
+On note que tout \'e\'ement \(x\) de \(G\) est racine du polyn\^ome
+
+\begin{equation}
+X^m - 1
+%%
+\label{}
+\end{equation}
+%%
+de \(\mathbb{K}[X]\). %
+Comme ce polyn\^ome admet au plus \(m\) racines distinctes, l'ordre de \(G\) est inf\'erieur ou \'egal \g{a} \(m\). %
+%%
+Puisque \(m\) est l'ordre d'un \'el\'ement \(a\) de \(G\) d'apr\g{e}s la question pr\'ec\'edente, %
+le th\'eor\g{e}me de Lagrange prouve que \(m\) divise \(\sharp G\) ; %
+\(G\) est donc d'ordre \(m\). %
+%%
+L'ordre de \(a\) \'etant aussi celui de \(G\), ce groupe est cyclique et \(a\) en est un g\'en\'erateur.
+%%
+\end{enumerate}
+\end{sol}
+
+\begin{rema}
+Nous verrons au chapitre~\ref{} un r\'esulat analogue \g{a} celui d\'emontr\'e \g{a} la question~\ref{ques:ord_ppcm} de cet exercice : %
+le th\'eor\g{e}me de Caley-Hamilton.
+\end{rema}
+
+\begin{rema}
+%%
+En appliquant le r\'esultat pr\'ec\'edent au corps fini \(\mathbb{Z} / p\mathbb{Z}\), on \'etablit que le groupe multiplicatif \(\mathbb{Z} / p\mathbb{Z}^{\times}\) est cyclique, %
+autrement dit qu'il existe une racine primitive modulo \(p\), pour tout nombre premier \(p\).
+%%
+\end{rema}
+
+\begin{rema}
+%%
+La question~\ref{seq_Aa_oppcm} de l'exercice fournit une construction de racine primitive modulo \(p\). %
+Toutefois, celle-ci n'est a priori pas plus efficace qu'une recherche exhaustive, on sait seulement qu'elle ach\g{e}ve.
+%%
+\end{rema}
 
 \begin{exer}[Tout anneau intègre et fini est un corps]%Questions intermédiaires : pas d'obligation.
 %Je pose tout d'abord le problème directement à l'élève, et je le laisse réfléchir quelques minutes sans indication de solution. Je continue l'interrogation en fonction de ses réactions, en posant éventuellement les questions intermédiaires qui suivent.\\
